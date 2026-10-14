@@ -1,37 +1,122 @@
-Helmamay
-STUDIOS
-ARTWORK
-ABOUT
-SHOP
-INDEPENDENT ART & DESIGN STUDIO
-An Exploration of Art & Design
-Helmamay Studios is an independent creative studio where a fascination with color, form, and pattern takes shape through original artwork and distinctive designs. Each creation reflects a spirit of curiosity, experimentation, and the freedom to explore beyond convention.
-Selected Works
-ORIGINAL ART & SURFACE DESIGN
-Artwork image coming soon
-Artwork 01
-Original artwork
-Artwork image coming soon
-Artwork 02
-Original artwork
-Artwork image coming soon
-Artwork 03
-Original artwork
-Artwork image coming soon
-Design 01
-Surface design
-Artwork image coming soon
-Design 02
-Surface design
-Artwork image coming soon
-Design 03
-Surface design
-Gallery placeholders will be replaced with photographs of original Helmamay Studios artwork.
-About the Studio
-Helmamay Studios is a space for artistic exploration—where color, pattern, and form come together in original works and distinctive designs. More about the artist and the creative process will be added here.
-DISCOVER THE COLLECTION
-Bring Art Into Your Space
-Explore available artwork, prints, and designs in the Helmamay shop.
-VISIT THE ETSY SHOP ↗
-© 2026 Helmamay Studios
-Art for curious spaces.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helmamay Studios | Art & Design</title>
+  <style>
+    :root { --paper:#f8f5ee; --ink:#292621; --line:#ded8ce; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
+    a { color:inherit; }
+    header { max-width:1200px; margin:auto; padding:32px 28px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .brand { text-decoration:none; display:inline-flex; flex-direction:column; align-items:center; }
+    .signature { font-family:"Brush Script MT","Segoe Script",cursive; font-size:49px; line-height:1; font-weight:400; }
+    .studios { font-size:11px; letter-spacing:6px; margin-top:8px; }
+    nav { display:flex; gap:28px; }
+    nav a { text-decoration:none; font-size:12px; letter-spacing:2px; }
+    nav a:hover, .shop-link:hover { text-decoration:underline; }
+    main { max-width:1200px; margin:auto; padding:0 28px; }
+    .intro { text-align:center; padding:82px 15px 85px; border-top:1px solid var(--line); }
+    .eyebrow { font-size:11px; letter-spacing:3px; text-transform:uppercase; }
+    h1 { font-family:Georgia,serif; font-size:clamp(36px,5vw,64px); font-weight:400; margin:23px 0; }
+    .intro p:last-child, .about p { max-width:680px; margin:0 auto; line-height:1.9; font-size:16px; }
+    section { scroll-margin-top:35px; }
+    .section-heading { text-align:center; margin:0 0 42px; }
+    h2 { font-family:Georgia,serif; font-size:36px; font-weight:400; margin:0 0 12px; }
+    .section-heading p { font-size:11px; letter-spacing:2px; text-transform:uppercase; }
+    .gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:34px 25px; }
+    .artwork { margin:0; }
+    .art-space { aspect-ratio:4/5; background:#eee9df; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; padding:20px; }
+    .art-space span { color:#827a70; font-family:Georgia,serif; font-size:17px; font-style:italic; text-align:center; }
+    .art-space img { display:block; width:100%; height:100%; object-fit:contain; }
+    figcaption { padding-top:14px; font-family:Georgia,serif; font-size:18px; }
+    figcaption small { display:block; margin-top:6px; font-family:Arial,sans-serif; font-size:12px; color:#706a62; }
+    .about { text-align:center; padding:105px 0; margin-top:90px; border-top:1px solid var(--line); }
+    .shop { text-align:center; padding:75px 20px 90px; border-top:1px solid var(--line); }
+    .shop p { line-height:1.8; }
+    .shop-link { display:inline-block; margin-top:22px; padding:16px 28px; border:1px solid var(--ink); text-decoration:none; font-size:12px; letter-spacing:2px; }
+    footer { border-top:1px solid var(--line); text-align:center; padding:30px; font-size:12px; color:#706a62; }
+    @media(max-width:750px) {
+      header { justify-content:center; }
+      nav { justify-content:center; }
+      .intro { padding:65px 5px; }
+      .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); gap:25px 15px; }
+    }
+    @media(max-width:480px) {
+      .gallery { grid-template-columns:1fr; }
+      nav { gap:18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="#top" aria-label="Helmamay Studios home">
+      <span class="signature">Helmamay</span>
+      <span class="studios">STUDIOS</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#artwork">ARTWORK</a>
+      <a href="#about">ABOUT</a>
+      <a href="#shop">SHOP</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="intro">
+      <p class="eyebrow">Independent Art & Design Studio</p>
+      <h1>An Exploration of Art & Design</h1>
+      <p>Helmamay Studios is an independent creative studio where a fascination with color, form, and pattern takes shape through original artwork and distinctive designs. Each creation reflects a spirit of curiosity, experimentation, and the freedom to explore beyond convention.</p>
+    </section>
+
+    <section id="artwork">
+      <div class="section-heading">
+        <h2>Selected Works</h2>
+        <p>Original Art & Surface Design</p>
+      </div>
+      <div class="gallery">
+        <figure class="artwork">
+          <div class="art-space"><span>Artwork image coming soon</span></div>
+          <figcaption>Artwork 01<small>Original artwork</small></figcaption>
+        </figure>
+        <figure class="artwork">
+          <div class="art-space"><span>Artwork image coming soon</span></div>
+          <figcaption>Artwork 02<small>Original artwork</small></figcaption>
+        </figure>
+        <figure class="artwork">
+          <div class="art-space"><span>Artwork image coming soon</span></div>
+          <figcaption>Artwork 03<small>Original artwork</small></figcaption>
+        </figure>
+        <figure class="artwork">
+          <div class="art-space"><span>Artwork image coming soon</span></div>
+          <figcaption>Design 01<small>Surface design</small></figcaption>
+        </figure>
+        <figure class="artwork">
+          <div class="art-space"><span>Artwork image coming soon</span></div>
+          <figcaption>Design 02<small>Surface design</small></figcaption>
+        </figure>
+        <figure class="artwork">
+          <div class="art-space"><span>Artwork image coming soon</span></div>
+          <figcaption>Design 03<small>Surface design</small></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About the Studio</h2>
+      <p>Helmamay Studios is a space for artistic exploration, where color, pattern, and form come together in original works and distinctive designs.</p>
+    </section>
+
+    <section id="shop" class="shop">
+      <p class="eyebrow">Discover the Collection</p>
+      <h2>Bring Art Into Your Space</h2>
+      <p>Explore available artwork, prints, and designs in the Helmamay shop.</p>
+      <a class="shop-link" href="https://www.etsy.com/shop/Helmamay" target="_blank" rel="noopener noreferrer">VISIT THE ETSY SHOP ↗</a>
+    </section>
+  </main>
+
+  <footer>© Helmamay Studios · Original Art & Design</footer>
+</body>
+</html>
