@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interplay, original abstract artwork by Helmamay Studios. Explore the artwork and see it displayed in interior settings.">
+  <title>Interplay | Helmamay Studios</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f8f5ef;
+      color: #292724;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 44px 20px 28px;
+      border-bottom: 1px solid #e4ded4;
+    }
+    .brand {
+      color: #292724;
+      text-decoration: none;
+      font-size: 27px;
+      letter-spacing: 1px;
+    }
+    .studio {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 5px;
+      margin-top: 3px;
+    }
+    main {
+      max-width: 1040px;
+      margin: auto;
+      padding: 45px 24px 70px;
+    }
+    .back {
+      color: #625e58;
+      font: 13px Arial, sans-serif;
+      text-decoration: none;
+    }
+    h1 {
+      text-align: center;
+      font-size: 43px;
+      font-weight: normal;
+      margin: 30px 0 6px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #79736d;
+      font-size: 15px;
+      margin-bottom: 38px;
+    }
+    .original {
+      display: block;
+      max-width: 650px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 55px;
+      cursor: zoom-in;
+    }
+    h2 {
+      font-size: 28px;
+      font-weight: normal;
+      text-align: center;
+      margin: 55px 0 22px;
+    }
+    .description {
+      max-width: 680px;
+      margin: auto;
+      text-align: center;
+      font-size: 17px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: zoom-in;
+    }
+    .gallery figure {
+      margin: 0;
+    }
+    .gallery figcaption {
+      font: 12px Arial, sans-serif;
+      color: #77716a;
+      text-align: center;
+      padding: 9px;
+    }
+    .shop {
+      text-align: center;
+      margin-top: 60px;
+    }
+    .shop a {
+      display: inline-block;
+      padding: 13px 28px;
+      border: 1px solid #39342f;
+      color: #39342f;
+      text-decoration: none;
+      font: 13px Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid #e4ded4;
+      font: 12px Arial, sans-serif;
+      color: #77716a;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.92);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 55px 20px 20px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 95%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 12px;
+      color: white;
+      background: none;
+      border: 0;
+      font-size: 36px;
+      cursor: pointer;
+    }
+    @media (max-width: 650px) {
+      .gallery { grid-template-columns: 1fr; }
+      h1 { font-size: 34px; }
+      main { padding: 28px 17px 50px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    Helmamay
+    <span class="studio">STUDIOS</span>
+  </a>
+</header>
+
+<main>
+  <a class="back" href="index.html#gallery">← Back to Gallery</a>
+
+  <h1>Interplay</h1>
+  <p class="subtitle">Original Artwork by Helmamay Studios</p>
+
+  <img class="original enlarge"
+       src="a22%20pink%20yellow.jpg"
+       alt="Interplay original abstract artwork in orange, pink and yellow">
+
+  <h2>About the Artwork</h2>
+  <p class="description">
+    Interplay explores the relationships between color, shape,
+    and pattern. Overlapping circular forms create movement
+    and rhythm, while intricate hand-drawn lines bring texture
+    and individuality to the composition.
+  </p>
+
+  <h2>Interplay in Your Space</h2>
+  <p class="description">
+    Explore how different frames and interior settings
+    can transform the presentation of this artwork.
+  </p>
+
+  <section class="gallery" aria-label="Interplay room mockups">
+    <figure>
+      <img class="enlarge" src="interplay-orange-console.jpg" alt="Interplay with an orange frame above an orange console" loading="lazy">
+      <figcaption>Orange Frame</figcaption>
+    </figure>
+    <figure>
+      <img class="enlarge" src="interplay-modern-living-room.jpg" alt="Interplay in a modern living room" loading="lazy">
+      <figcaption>Modern Living Room</figcaption>
+    </figure>
+    <figure>
+      <img class="enlarge" src="interplay-dining-room.jpg" alt="Interplay in a dining area with a natural wood frame" loading="lazy">
+      <figcaption>Natural Wood Frame</figcaption>
+    </figure>
+    <figure>
+      <img class="enlarge" src="interplay-desk-lamp.jpg" alt="Interplay above a wooden desk" loading="lazy">
+      <figcaption>Desk Setting</figcaption>
+    </figure>
+    <figure>
+      <img class="enlarge" src="interplay-home-office.jpg" alt="Interplay in a home office" loading="lazy">
+      <figcaption>Home Office</figcaption>
+    </figure>
+    <figure>
+      <img class="enlarge" src="interplay-blue-chairs.jpg" alt="Interplay above a fireplace with blue chairs" loading="lazy">
+      <figcaption>Traditional Interior</figcaption>
+    </figure>
+    <figure>
+      <img class="enlarge" src="interplay-yellow-frame.jpg" alt="Interplay displayed in a bright yellow frame" loading="lazy">
+      <figcaption>Colorful Frame</figcaption>
+    </figure>
+  </section>
+
+  <div class="shop">
+    <a href="https://www.etsy.com/shop/Helmamay" target="_blank" rel="noopener noreferrer">
+      Visit the Helmamay Etsy Shop
+    </a>
+  </div>
+</main>
+
+<footer>
+  © Helmamay Studios · Art & Design
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged artwork">
+  <button class="close" id="close" aria-label="Close enlarged image">×</button>
+  <img id="lightbox-image" alt="">
+</div>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const enlarged = document.getElementById("lightbox-image");
+  const closeButton = document.getElementById("close");
+
+  document.querySelectorAll(".enlarge").forEach(img => {
+    img.addEventListener("click", () => {
+      enlarged.src = img.src;
+      enlarged.alt = img.alt;
+      lightbox.classList.add("open");
+      closeButton.focus();
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("open");
+    enlarged.removeAttribute("src");
+  }
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", event => {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeLightbox();
+  });
+</script>
+
+</body>
+</html>
