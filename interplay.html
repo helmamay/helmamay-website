@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interplay, original abstract artwork by Helmamay Studios, shown in interior settings.">
+  <title>Interplay | Helmamay Studios</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #faf8f3;
+      color: #292724;
+      font-family: Georgia, serif;
+      text-align: center;
+    }
+    header { padding: 45px 20px 25px; }
+    h1 { font-size: 36px; font-weight: normal; margin-bottom: 10px; }
+    .subtitle { color: #777; font-size: 15px; }
+    .back {
+      display: inline-block;
+      margin-top: 24px;
+      color: #292724;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1100px;
+      margin: 20px auto 70px;
+      padding: 0 22px;
+    }
+    .original {
+      max-width: 480px;
+      width: 100%;
+      height: auto;
+      margin: 20px auto 55px;
+      display: block;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    figure { margin: 0; }
+    @media (max-width: 650px) {
+      .gallery { grid-template-columns: 1fr; }
+      h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Interplay</h1>
+    <p class="subtitle">Original Artwork | Helmamay Studios</p>
+    <a class="back" href="index.html">← Back to Gallery</a>
+  </header>
+
+  <main>
+    <img class="original" src="a13 blue red.jpg" alt="Interplay original artwork">
+
+    <div class="gallery">
+      <figure>
+        <img src="Smartist_685EA992-8A71-4CE2-831E-8FAB1226335C.png" alt="Interplay artwork in an interior setting">
+      </figure>
+      <figure>
+        <img src="Smartist_7F877C50-DF14-4189-A895-154B41355CB9.png" alt="Interplay artwork in an interior setting">
+      </figure>
+      <figure>
+        <img src="Smartist_B1882146-AA2F-434A-8028-5CFDA26A9A6A.png" alt="Interplay artwork in an interior setting">
+      </figure>
+      <figure>
+        <img src="Smartist_F52412F5-F110-4AB4-9C4F-7F3B879514EC.png" alt="Interplay artwork in an interior setting">
+      </figure>
+      <figure>
+        <img src="Smartist_FCD6E6FC-4ED3-472E-8A78-2AB1789A89E9.png" alt="Interplay artwork in an interior setting">
+      </figure>
+    </div>
+  </main>
+</body>
+</html>
