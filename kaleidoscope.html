@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kaleidoscope, original abstract artwork by Helmamay Studios, shown in a collection of interior settings.">
+  <title>Kaleidoscope | Helmamay Studios</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #faf8f3;
+      color: #292724;
+      font-family: Georgia, serif;
+      text-align: center;
+    }
+    header { padding: 45px 20px 25px; }
+    h1 { font-size: 36px; font-weight: normal; margin-bottom: 10px; }
+    .subtitle { color: #777; font-size: 15px; }
+    .back {
+      display: inline-block;
+      margin-top: 24px;
+      color: #292724;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1100px;
+      margin: 20px auto 70px;
+      padding: 0 22px;
+    }
+    .original {
+      max-width: 480px;
+      width: 100%;
+      height: auto;
+      margin: 20px auto 55px;
+      display: block;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    figure { margin: 0; }
+    @media (max-width: 650px) {
+      .gallery { grid-template-columns: 1fr; }
+      h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kaleidoscope</h1>
+    <p class="subtitle">Original Artwork | Helmamay Studios</p>
+    <a class="back" href="index.html">← Back to Gallery</a>
+  </header>
+
+  <main>
+    <img class="original" src="a8 pastel.jpg" alt="Kaleidoscope original artwork">
+
+    <div class="gallery">
+      <figure>
+        <img src="pastel.png" alt="Kaleidoscope displayed in an interior setting">
+      </figure>
+      <figure>
+        <img src="pastel2.png" alt="Kaleidoscope displayed in an interior setting">
+      </figure>
+      <figure>
+        <img src="pastel5.png" alt="Kaleidoscope displayed in an interior setting">
+      </figure>
+      <figure>
+        <img src="pastel6.png" alt="Kaleidoscope displayed in an interior setting">
+      </figure>
+      <figure>
+        <img src="Smartist_6703AB80-3E34-4310-98E3-B6AD3A7F2CD0.png" alt="Kaleidoscope displayed in an interior setting">
+      </figure>
+    </div>
+  </main>
+</body>
+</html>
