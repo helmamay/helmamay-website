@@ -22,13 +22,27 @@
     main { max-width:1200px; margin:auto; padding:0 28px; }
     .ornamental-divider {
   max-width: 1444px;
-  margin: -35px auto 0;
+  margin: -15px auto 0;
   padding: 0 28px;
   display: flex;
   align-items: center;
   gap: 16px;
-} margin:0 auto; padding:0 28px; display:flex; align-items:center; gap:16px; color:#bcb1a1; }
-    .ornamental-divider::before, .ornamental-divider::after { content:""; height:1px; background:#cfc5b8; flex:1; }
+} 
+   .ornamental-divider::before,
+.ornamental-divider::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #cfc5b8;
+  flex: 1 1 0;
+}
+
+.ornamental-divider svg {
+  display: block;
+  width: 88px;
+  height: 28px;
+  flex: 0 0 88px;
+}
     .ornamental-divider span { font-family:Georgia,serif; font-size:30px; line-height:1; font-weight:normal; }
     .intro {
   text-align: center;
