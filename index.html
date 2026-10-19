@@ -20,7 +20,14 @@
     nav a { text-decoration:none; font-size:12px; letter-spacing:2px; }
     nav a:hover, .shop-link:hover { text-decoration:underline; }
     main { max-width:1200px; margin:auto; padding:0 28px; }
-    .ornamental-divider { max-width:1444px; margin:0 auto; padding:0 28px; display:flex; align-items:center; gap:16px; color:#bcb1a1; }
+    .ornamental-divider {
+  max-width: 1444px;
+  margin: -35px auto 0;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+} margin:0 auto; padding:0 28px; display:flex; align-items:center; gap:16px; color:#bcb1a1; }
     .ornamental-divider::before, .ornamental-divider::after { content:""; height:1px; background:#cfc5b8; flex:1; }
     .ornamental-divider span { font-family:Georgia,serif; font-size:30px; line-height:1; font-weight:normal; }
     .intro {
@@ -110,7 +117,14 @@
       <a href="#shop">FOR DESIGNERS</a>
     </nav>
   </header>
- <div class="ornamental-divider" aria-hidden="true"><span>∞</span></div>
+<div class="ornamental-divider" aria-hidden="true">
+  <svg width="88" height="28" viewBox="0 0 88 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#b8aa98" stroke-width="1.5" stroke-linecap="round">
+      <path d="M44 14 C31 0, 15 2, 12 14 C9 26, 27 27, 44 14 C61 1, 79 2, 76 14 C73 26, 57 28, 44 14Z"/>
+      <path d="M44 14 C29 7, 23 5, 20 14 C17 23, 31 22, 44 14 C57 6, 71 5, 68 14 C65 23, 59 21, 44 14Z"/>
+    </g>
+  </svg>
+</div>
   <main id="top">
     <section class="intro">
       <h1>Art That Defines a Space.</h1>
