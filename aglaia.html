@@ -5,113 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Aglaia, original abstract artwork by Helmamay Studios, shown in a collection of interior settings.">
   <title>Aglaia | Helmamay Studios</title>
-
   <style>
     * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      background: #faf8f3;
-      color: #292724;
-      font-family: Georgia, serif;
-      text-align: center;
-    }
-
-    header {
-      padding: 60px 20px 35px;
-    }
-
-    h1 {
-      font-size: 48px;
-      font-weight: normal;
-      margin: 0 0 12px;
-    }
-
-    .subtitle {
-      color: #77716a;
-      font-size: 16px;
-      letter-spacing: 1px;
-    }
-
-    .back {
-      display: inline-block;
-      margin-top: 20px;
-      color: #292724;
-      text-decoration: none;
-      border-bottom: 1px solid #292724;
-      padding-bottom: 4px;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px 24px 80px;
-    }
-
-    .original {
-      display: block;
-      max-width: 280px;
-      max-height: 850px;
-      width: auto;
-      height: auto;
-      margin: 0 auto 65px;
-      object-fit: contain;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 35px;
-    }
-
-    figure {
-      margin: 0;
-    }
-
-    figure img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    @media (max-width: 700px) {
-      h1 { font-size: 36px; }
-      .gallery { grid-template-columns: 1fr; }
-    }
+    body { margin: 0; background: #faf8f3; color: #292724; font-family: Georgia, serif; text-align: center; }
+    header { padding: 60px 20px 35px; }
+    h1 { font-size: 48px; font-weight: normal; margin: 0 0 12px; }
+    .subtitle { color: #77716a; font-size: 16px; letter-spacing: 1px; }
+    .back { display: inline-block; margin-top: 20px; color: #292724; text-decoration: none; border-bottom: 1px solid #292724; padding-bottom: 4px; }
+    main { max-width: 1100px; margin: auto; padding: 20px 24px 80px; }
+    .original { display: block; max-width: 280px; max-height: 850px; width: auto; height: auto; margin: 0 auto 65px; object-fit: contain; }
+    .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 35px; }
+    figure { margin: 0; }
+    figure img { display: block; width: 100%; height: auto; }
+    .customize { max-width: 860px; margin: 90px auto 0; padding-top: 42px; border-top: 1px solid #d8d2c9; }
+    .customize h2 { font-size: 32px; font-weight: normal; margin: 0 0 14px; }
+    .customize > p { color: #68615a; line-height: 1.6; }
+    .preview-area { padding: 30px 12px 24px; }
+    .frame { display: inline-block; max-width: 100%; padding: 13px; background: #9c744d; box-shadow: 0 5px 15px #0002; }
+    .mat { padding: 28px; background: #fffef8; transition: padding .2s, background .2s; }
+    .mat img { display: block; max-width: min(270px, 60vw); max-height: 380px; width: auto; height: auto; object-fit: contain; }
+    .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 16px 0 28px; text-align: left; }
+    .quote { text-align: left; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .wide { grid-column: 1 / -1; }
+    label { font-size: 14px; }
+    select, input, textarea { width: 100%; border: 1px solid #c9c2b8; border-radius: 0; padding: 12px; font: 15px Georgia, serif; color: #292724; background: #fffefa; }
+    textarea { resize: vertical; min-height: 95px; }
+    button { border: 1px solid #292724; padding: 14px 24px; background: #292724; color: white; font: 16px Georgia, serif; cursor: pointer; }
+    button:hover { background: #4c443b; }
+    #form-status { min-height: 24px; line-height: 1.5; }
+    @media (max-width: 700px) { h1 { font-size: 36px; } .gallery, .controls, .quote { grid-template-columns: 1fr; } }
   </style>
 </head>
-
 <body>
   <header>
     <h1>Aglaia</h1>
     <p class="subtitle">Original Artwork | Helmamay Studios</p>
     <a class="back" href="index.html">← Back to Gallery</a>
   </header>
-
   <main>
     <img class="original" src="Aglaia.JPG" alt="Aglaia original artwork">
-
     <div class="gallery">
-      <figure>
-        <img src="Aglaia5.png" alt="Aglaia interior mockup 4">
-      </figure>
-
-      <figure>
-        <img src="Aglaia2.png" alt="Aglaia interior mockup 2">
-      </figure>
-
-      <figure>
-        <img src="Aglaia9.png" alt="Aglaia interior mockup 5">
-      </figure>
-
-      <figure>
-        <img src="Aglaia4.png" alt="Aglaia interior mockup 3">
-      </figure>
-
-      <figure>
-        <img src="Aglaia1.png" alt="Aglaia interior mockup 1">
-      </figure>
+      <figure><img src="Aglaia5.png" alt="Aglaia interior mockup 4"></figure>
+      <figure><img src="Aglaia2.png" alt="Aglaia interior mockup 2"></figure>
+      <figure><img src="Aglaia9.png" alt="Aglaia interior mockup 5"></figure>
+      <figure><img src="Aglaia4.png" alt="Aglaia interior mockup 3"></figure>
+      <figure><img src="Aglaia1.png" alt="Aglaia interior mockup 1"></figure>
     </div>
+    <section class="customize" aria-labelledby="customize-heading">
+      <h2 id="customize-heading">Customize This Artwork</h2>
+      <p>Explore frame and mat combinations, then request a personalized trade quote for your project. Preview is illustrative; final proportions depend on the selected print size.</p>
+      <div class="preview-area">
+        <div class="frame" id="frame-preview"><div class="mat" id="mat-preview"><img src="Aglaia.JPG" alt="Aglaia artwork framing preview"></div></div>
+      </div>
+      <div class="controls">
+        <div class="field"><label for="frame-finish">Frame finish</label><select id="frame-finish" form="quote-form" name="Frame finish"><option>Natural Wood</option><option>Black</option><option>White</option></select></div>
+        <div class="field"><label for="matting">Matting</label><select id="matting" form="quote-form" name="Matting"><option>White</option><option>Ivory</option><option>No Mat</option></select></div>
+      </div>
+      <form id="quote-form" class="quote" action="https://formspree.io/f/xeaewlqp" method="POST">
+        <input type="hidden" name="Artwork" value="Aglaia">
+        <input type="hidden" name="_subject" value="Helmamay Studios trade quote request — Aglaia">
+        <div class="field"><label for="print-size">Print size</label><select id="print-size" name="Print size" required><option value="8 × 10 inches">8 × 10 inches</option><option value="16 × 20 inches">16 × 20 inches</option><option value="24 × 30 inches">24 × 30 inches</option><option value="Custom size">Custom size (specify below)</option></select></div>
+        <div class="field"><label for="quantity">Quantity</label><input id="quantity" name="Quantity" type="number" min="1" value="1" required></div>
+        <div class="field"><label for="client-name">Your name</label><input id="client-name" name="Name" autocomplete="name" required></div>
+        <div class="field"><label for="company">Design firm / company</label><input id="company" name="Company" autocomplete="organization" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="phone">Phone (optional)</label><input id="phone" name="Phone" type="tel" autocomplete="tel"></div>
+        <div class="field wide"><label for="location">Project location (optional)</label><input id="location" name="Project location"></div>
+        <div class="field wide"><label for="notes">Project notes / custom size</label><textarea id="notes" name="Project notes" placeholder="Tell us about your project, dimensions, or special requests."></textarea></div>
+        <div class="wide"><button type="submit" id="submit-quote">Request a Trade Quote</button><p id="form-status" role="status" aria-live="polite"></p></div>
+      </form>
+    </section>
   </main>
+  <script>
+    const frameSelect = document.getElementById('frame-finish');
+    const matSelect = document.getElementById('matting');
+    const framePreview = document.getElementById('frame-preview');
+    const matPreview = document.getElementById('mat-preview');
+    function updatePreview() {
+      framePreview.style.background = ({'Natural Wood':'#9c744d', 'Black':'#252525', 'White':'#f4f2ed'})[frameSelect.value];
+      matPreview.style.background = ({'White':'#fffef8', 'Ivory':'#e9dfc9', 'No Mat':'transparent'})[matSelect.value];
+      matPreview.style.padding = matSelect.value === 'No Mat' ? '0' : '28px';
+    }
+    frameSelect.addEventListener('change', updatePreview);
+    matSelect.addEventListener('change', updatePreview);
+    updatePreview();
+    const form = document.getElementById('quote-form');
+    const status = document.getElementById('form-status');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const button = document.getElementById('submit-quote');
+      button.disabled = true;
+      status.textContent = 'Sending your request…';
+      try {
+        const response = await fetch(form.action, {method: 'POST', body: new FormData(form), headers: {'Accept': 'application/json'}});
+        if (!response.ok) throw new Error('Unable to send');
+        status.textContent = 'Thank you. Your trade quote request has been sent.';
+        form.reset();
+        updatePreview();
+      } catch (error) {
+        status.textContent = 'Your request could not be sent. Please try again.';
+      } finally { button.disabled = false; }
+    });
+  </script>
 </body>
 </html>
