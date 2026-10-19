@@ -3,53 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Terra, original abstract artwork by Helmamay Studios, shown in a collection of interior settings.">
+  <meta name="description" content="Terra, original abstract artwork by Helmamay Studios, shown in interior settings and available for custom trade quotes.">
   <title>Terra | Helmamay Studios</title>
   <style>
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #faf8f3;
-      color: #292724;
-      font-family: Georgia, serif;
-      text-align: center;
-    }
+    body { margin: 0; background: #faf8f3; color: #292724; font-family: Georgia, serif; text-align: center; }
     header { padding: 45px 20px 25px; }
     h1 { font-size: 36px; font-weight: normal; margin-bottom: 10px; }
     .subtitle { color: #777; font-size: 15px; }
-    .back {
-      display: inline-block;
-      margin-top: 24px;
-      color: #292724;
-      text-decoration: underline;
-    }
-    main {
-      max-width: 1100px;
-      margin: 20px auto 70px;
-      padding: 0 22px;
-    }
-    .original {
-      max-width: 360px;
-      width: 100%;
-      height: auto;
-      margin: 20px auto 55px;
-      display: block;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+    .back { display: inline-block; margin-top: 24px; color: #292724; text-decoration: underline; }
+    main { max-width: 1100px; margin: 20px auto 70px; padding: 0 22px; }
+    .original { max-width: 360px; width: 100%; height: auto; margin: 20px auto 55px; display: block; }
+    .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .gallery img { width: 100%; height: auto; display: block; }
     figure { margin: 0; }
-    @media (max-width: 650px) {
-      .gallery { grid-template-columns: 1fr; }
-      h1 { font-size: 30px; }
-    }
+    .customize { border-top: 1px solid #dcd6cd; margin-top: 75px; padding-top: 45px; }
+    .customize h2 { font-weight: normal; font-size: 30px; }
+    .customize-intro { color: #69645d; max-width: 650px; margin: 0 auto 30px; line-height: 1.6; }
+    .preview { margin: 25px auto 36px; display: flex; align-items: center; justify-content: center; min-height: 300px; }
+    .frame { background: #9c744d; padding: 15px; box-shadow: 0 8px 25px rgba(0,0,0,.17); max-width: 100%; }
+    .mat { background: #fffef8; padding: 32px; }
+    .mat img { display: block; width: auto; height: auto; max-height: 350px; max-width: min(100%, 300px); object-fit: contain; }
+    form { max-width: 680px; margin: 0 auto; text-align: left; }
+    .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    label { display: block; margin: 0 0 6px; font-size: 14px; }
+    .field { margin-bottom: 18px; }
+    input, select, textarea { width: 100%; padding: 12px; border: 1px solid #c9c1b7; border-radius: 0; background: #fff; color: #292724; font: inherit; }
+    textarea { min-height: 110px; resize: vertical; }
+    button { background: #292724; color: #fff; padding: 15px 28px; border: 0; cursor: pointer; font: inherit; }
+    button:disabled { opacity: .6; cursor: wait; }
+    #form-status { min-height: 24px; margin-top: 15px; line-height: 1.5; }
+    @media (max-width: 650px) { .gallery, .fields { grid-template-columns: 1fr; } h1 { font-size: 30px; } .mat { padding: 20px; } }
   </style>
 </head>
 <body>
@@ -58,24 +42,70 @@
     <p class="subtitle">Original Artwork | Helmamay Studios</p>
     <a class="back" href="index.html">← Back to Gallery</a>
   </header>
-
   <main>
-    <img class="original" src="a15 green purple.jpg" alt="Terra original artwork">
-
+    <img class="original" src="a15%20green%20purple.jpg" alt="Terra original artwork">
     <div class="gallery">
-      <figure>
-        <img src="Smartist_71452741-8415-4587-A4A5-D611D5EDDB4A.png" alt="Terra displayed in an interior setting">
-      </figure>
-      <figure>
-        <img src="Smartist_539916A7-8AB4-4839-A2C7-0DEEFE7312BA.png" alt="Terra displayed in an interior setting">
-      </figure>
-      <figure>
-        <img src="Smartist_38BCEBFA-F93B-428D-98E8-3C06E10FA085.png" alt="Terra displayed in an interior setting">
-      </figure>
-      <figure>
-        <img src="Smartist_364D99C4-43AC-48DE-B205-1BD932E59DF6.png" alt="Terra displayed in an interior setting">
-      </figure>
+      <figure><img src="Smartist_71452741-8415-4587-A4A5-D611D5EDDB4A.png" alt="Terra displayed in an interior setting"></figure>
+      <figure><img src="Smartist_539916A7-8AB4-4839-A2C7-0DEEFE7312BA.png" alt="Terra displayed in an interior setting"></figure>
+      <figure><img src="Smartist_38BCEBFA-F93B-428D-98E8-3C06E10FA085.png" alt="Terra displayed in an interior setting"></figure>
+      <figure><img src="Smartist_364D99C4-43AC-48DE-B205-1BD932E59DF6.png" alt="Terra displayed in an interior setting"></figure>
     </div>
+    <section class="customize" aria-labelledby="customize-title">
+      <h2 id="customize-title">Customize This Artwork</h2>
+      <p class="customize-intro">Explore frame and matting combinations, then request a custom trade quote for your project. Local pickup and delivery are available by arrangement.</p>
+      <div class="preview" aria-label="Artwork frame and mat preview">
+        <div class="frame" id="frame-preview"><div class="mat" id="mat-preview"><img src="a15%20green%20purple.jpg" alt="Terra shown with selected frame and matting"></div></div>
+      </div>
+      <form id="quote-form" action="https://formspree.io/f/xeaewlqp" method="POST">
+        <input type="hidden" name="Artwork" value="Terra">
+        <input type="hidden" name="_subject" value="Helmamay Studios trade quote request: Terra">
+        <div class="fields">
+          <div class="field"><label for="print-size">Print size</label><select id="print-size" name="Print size" required><option value="8 x 10 inches">8 × 10 inches</option><option value="16 x 20 inches">16 × 20 inches</option><option value="24 x 30 inches">24 × 30 inches</option><option value="Custom size">Custom size (specify below)</option></select></div>
+          <div class="field"><label for="quantity">Quantity</label><input id="quantity" name="Quantity" type="number" min="1" value="1" required></div>
+          <div class="field"><label for="frame-finish">Frame finish</label><select id="frame-finish" name="Frame finish"><option value="Natural wood">Natural Wood</option><option value="Black">Black</option><option value="White">White</option></select></div>
+          <div class="field"><label for="matting">Matting</label><select id="matting" name="Matting"><option value="White">White</option><option value="Ivory">Ivory</option><option value="No mat">No Mat</option></select></div>
+          <div class="field"><label for="customer-name">Name</label><input id="customer-name" name="Name" autocomplete="name" required></div>
+          <div class="field"><label for="company">Company / Design Studio</label><input id="company" name="Company" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required></div>
+          <div class="field"><label for="phone">Phone (optional)</label><input id="phone" type="tel" name="Phone" autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="project-location">Project location (optional)</label><input id="project-location" name="Project location"></div>
+        <div class="field"><label for="notes">Custom size, delivery needs, or project notes (optional)</label><textarea id="notes" name="Project notes"></textarea></div>
+        <button type="submit" id="submit-quote">Request Trade Quote</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
   </main>
+  <script>
+    const frameFinish = document.getElementById('frame-finish');
+    const matting = document.getElementById('matting');
+    const framePreview = document.getElementById('frame-preview');
+    const matPreview = document.getElementById('mat-preview');
+    function updatePreview() {
+      framePreview.style.backgroundColor = { 'Natural wood': '#9c744d', 'Black': '#252525', 'White': '#f4f2ed' }[frameFinish.value];
+      matPreview.style.backgroundColor = { 'White': '#fffef8', 'Ivory': '#e9dfc9', 'No mat': 'transparent' }[matting.value];
+      matPreview.style.padding = matting.value === 'No mat' ? '0' : '';
+    }
+    frameFinish.addEventListener('change', updatePreview);
+    matting.addEventListener('change', updatePreview);
+    updatePreview();
+    const form = document.getElementById('quote-form');
+    const status = document.getElementById('form-status');
+    const submit = document.getElementById('submit-quote');
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      status.textContent = 'Sending your request…';
+      submit.disabled = true;
+      try {
+        const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+        if (!response.ok) throw new Error('Submission failed');
+        status.textContent = 'Thank you! Your trade quote request has been sent.';
+        form.reset();
+        updatePreview();
+      } catch (error) {
+        status.textContent = 'Your request could not be sent. Please try again.';
+      } finally { submit.disabled = false; }
+    });
+  </script>
 </body>
 </html>
