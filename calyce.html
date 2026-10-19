@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Calyce, original abstract artwork by Helmamay Studios, shown in curated interiors with custom framing options for design professionals.">
+  <title>Calyce | Helmamay Studios</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #faf8f3; color: #292724; font-family: Georgia, serif; text-align: center; }
+    header { padding: 60px 20px 35px; }
+    h1 { font-size: 48px; font-weight: normal; margin: 0 0 12px; }
+    .subtitle { color: #77716a; font-size: 16px; letter-spacing: 1px; }
+    .back { display: inline-block; margin-top: 20px; color: #292724; text-decoration: none; border-bottom: 1px solid #292724; padding-bottom: 4px; }
+    main { max-width: 1100px; margin: auto; padding: 20px 24px 80px; }
+    .original { display: block; max-width: 360px; max-height: 600px; width: 100%; height: auto; margin: 0 auto 65px; object-fit: contain; }
+    .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 35px; }
+    figure { margin: 0; }
+    figure img { display: block; width: 100%; height: auto; }
+    .customize { margin: 90px auto 0; max-width: 860px; padding-top: 30px; border-top: 1px solid #dcd5ca; }
+    .customize h2 { font-size: 30px; font-weight: normal; margin: 0 0 12px; }
+    .customize > p { color: #77716a; line-height: 1.6; }
+    .preview-area { display: flex; justify-content: center; align-items: center; min-height: 390px; margin: 36px 0; }
+    .frame { background: #9c744d; padding: 13px; box-shadow: 3px 8px 18px #0003; width: min(350px, 90%); transition: background .2s; }
+    .mat { background: #fffef8; padding: 26px; transition: background .2s, padding .2s; }
+    .mat img { display: block; width: 100%; height: auto; }
+    form { max-width: 650px; margin: 0 auto; text-align: left; }
+    .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .field { margin: 0 0 20px; }
+    label { display: block; margin-bottom: 8px; font-size: 14px; }
+    input, select, textarea { display: block; width: 100%; padding: 12px; border: 1px solid #c8c0b5; border-radius: 0; background: #fffefa; color: #292724; font: 15px Georgia, serif; }
+    textarea { min-height: 100px; resize: vertical; }
+    .submit { border: 1px solid #292724; background: #292724; color: white; padding: 14px 28px; font: 15px Georgia, serif; cursor: pointer; }
+    .submit:hover { background: #555047; }
+    #form-status { margin: 16px 0; min-height: 20px; line-height: 1.5; }
+    .smallprint { color: #77716a; font-size: 13px; line-height: 1.5; margin: 20px 0; }
+    @media (max-width: 700px) { h1 { font-size: 36px; } .gallery, .fields { grid-template-columns: 1fr; } .customize { margin-top: 60px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Calyce</h1>
+    <p class="subtitle">Original Artwork | Helmamay Studios</p>
+    <a class="back" href="index.html">← Back to Gallery</a>
+  </header>
+  <main>
+    <img class="original" src="Calyce_1.jpg" alt="Calyce original artwork">
+    <div class="gallery">
+      <figure><img src="calyce10.png" alt="Calyce in a restaurant interior" loading="lazy"></figure>
+      <figure><img src="calyce3.png" alt="Calyce in a modern lounge" loading="lazy"></figure>
+      <figure><img src="calyce7.png" alt="Calyce in a reading corner" loading="lazy"></figure>
+      <figure><img src="calyce11.png" alt="Calyce above a green sofa" loading="lazy"></figure>
+      <figure><img src="calyce5.png" alt="Calyce above a console table" loading="lazy"></figure>
+      <figure><img src="calyce4.png" alt="Calyce in a bedroom" loading="lazy"></figure>
+      <figure><img src="calyce8.png" alt="Calyce above a wooden dresser" loading="lazy"></figure>
+      <figure><img src="calyce2.png" alt="Calyce in a blue home office" loading="lazy"></figure>
+    </div>
+    <section class="customize" aria-labelledby="customize-heading">
+      <h2 id="customize-heading">Customize This Artwork</h2>
+      <p>Explore framing and matting combinations, then request a custom trade quote.</p>
+      <div class="preview-area"><div class="frame" id="frame-preview"><div class="mat" id="mat-preview"><img src="Calyce_1.jpg" alt="Calyce framing and matting preview"></div></div></div>
+      <form id="trade-form" action="https://formspree.io/f/xeaewlqp" method="POST">
+        <input type="hidden" name="Artwork" value="Calyce">
+        <input type="hidden" name="_subject" value="Helmamay Studios Trade Quote — Calyce">
+        <div class="fields">
+          <div class="field"><label for="print-size">Print Size</label><select id="print-size" name="Print Size" required><option>8 × 10 inches</option><option>16 × 20 inches</option><option>24 × 30 inches</option><option>Custom size — specify below</option></select></div>
+          <div class="field"><label for="quantity">Quantity</label><input id="quantity" name="Quantity" type="number" min="1" value="1" required></div>
+          <div class="field"><label for="frame-finish">Frame Finish</label><select id="frame-finish" name="Frame Finish"><option value="wood">Natural Wood</option><option value="black">Black</option><option value="white">White</option></select></div>
+          <div class="field"><label for="matting">Matting</label><select id="matting" name="Matting"><option value="white">White</option><option value="ivory">Ivory</option><option value="none">No Mat</option></select></div>
+          <div class="field"><label for="name">Your Name *</label><input id="name" name="Name" autocomplete="name" required></div>
+          <div class="field"><label for="company">Design Firm / Company *</label><input id="company" name="Company" required></div>
+          <div class="field"><label for="email">Email Address *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="phone">Phone (optional)</label><input id="phone" name="Phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="location">Project Location (optional)</label><input id="location" name="Project Location"></div>
+        <div class="field"><label for="notes">Project Details / Custom Size (optional)</label><textarea id="notes" name="Project Details" placeholder="Tell us about your project, requested dimensions, or timing."></textarea></div>
+        <button class="submit" type="submit">Request a Trade Quote</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+        <p class="smallprint">Frame and mat previews are illustrative. Final specifications and pricing will be confirmed in your quote.</p>
+      </form>
+    </section>
+  </main>
+  <script>
+    const frameFinish = document.getElementById('frame-finish');
+    const matting = document.getElementById('matting');
+    const framePreview = document.getElementById('frame-preview');
+    const matPreview = document.getElementById('mat-preview');
+    function updatePreview() {
+      framePreview.style.background = { wood: '#9c744d', black: '#252525', white: '#f4f2ed' }[frameFinish.value];
+      matPreview.style.background = { white: '#fffef8', ivory: '#e9dfc9', none: 'transparent' }[matting.value];
+      matPreview.style.padding = matting.value === 'none' ? '0' : '26px';
+    }
+    frameFinish.addEventListener('change', updatePreview);
+    matting.addEventListener('change', updatePreview);
+    updatePreview();
+    const form = document.getElementById('trade-form');
+    const status = document.getElementById('form-status');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      status.textContent = 'Sending your request…';
+      const button = form.querySelector('button[type="submit"]');
+      button.disabled = true;
+      try {
+        const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        if (!response.ok) throw new Error('Submission failed');
+        status.textContent = 'Thank you. Your trade quote request has been sent.';
+        form.reset();
+        updatePreview();
+      } catch (error) {
+        status.textContent = 'Your request could not be sent. Please try again.';
+      } finally { button.disabled = false; }
+    });
+  </script>
+</body>
+</html>
