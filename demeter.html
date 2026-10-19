@@ -1,84 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Demeter, original abstract artwork by Helmamay Studios, presented in a collection of interior settings.">
-  <title>Demeter | Helmamay Studios</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #faf8f3;
-      color: #292724;
-      font-family: Georgia, serif;
-      text-align: center;
-    }
-    header { padding: 45px 20px 25px; }
-    h1 { font-size: 36px; font-weight: normal; margin-bottom: 10px; }
-    .subtitle { color: #777; font-size: 15px; }
-    .back {
-      display: inline-block;
-      margin-top: 24px;
-      color: #292724;
-      text-decoration: underline;
-    }
-    main {
-      max-width: 1100px;
-      margin: 20px auto 70px;
-      padding: 0 22px;
-    }
-    .original {
-      max-width: 280px;
-      width: 100%;
-      height: auto;
-      margin: 20px auto 55px;
-      display: block;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    figure { margin: 0; }
-    @media (max-width: 650px) {
-      .gallery { grid-template-columns: 1fr; }
-      h1 { font-size: 30px; }
-    }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Demeter original abstract artwork by Helmamay Studios, available for interior designer trade inquiries.">
+<title>Demeter | Helmamay Studios</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#faf8f3;color:#292724;font-family:Georgia,serif;text-align:center}
+header{padding:45px 20px 25px}h1{font-size:36px;font-weight:normal;margin-bottom:10px}.subtitle{color:#777;font-size:15px}
+.back{display:inline-block;margin-top:24px;color:#292724;text-decoration:underline}
+main{max-width:1100px;margin:20px auto 70px;padding:0 22px}.original{max-width:280px;width:100%;height:auto;margin:20px auto 55px;display:block}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.gallery img{width:100%;height:auto;display:block}figure{margin:0}
+.customize{margin:80px auto 0;padding-top:35px;border-top:1px solid #dcd5ca;max-width:850px}
+.customize h2{font-size:29px;font-weight:normal}.customize p{color:#68625b;line-height:1.6}
+.preview-area{display:flex;justify-content:center;padding:25px 12px 35px}
+.frame{background:#9c744d;padding:13px;box-shadow:0 6px 22px #0003;max-width:100%}
+.mat{background:#fffef8;padding:26px;transition:padding .2s,background .2s}
+.mat img{display:block;max-width:100%;width:230px;height:auto;max-height:350px;object-fit:contain}
+form{max-width:670px;margin:0 auto;text-align:left;display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.field{display:flex;flex-direction:column;gap:7px}label{font-size:14px}input,select,textarea{font:inherit;font-size:15px;width:100%;padding:12px;border:1px solid #bcb4a9;background:#fffdfa;color:#292724;border-radius:0}
+.full{grid-column:1/-1}button{background:#292724;color:white;border:0;padding:15px 24px;font:inherit;cursor:pointer}button:hover{background:#4b453d}button:disabled{opacity:.6;cursor:wait}
+#form-status{grid-column:1/-1;margin:0;min-height:1.5em}
+@media(max-width:650px){.gallery{grid-template-columns:1fr}h1{font-size:30px}form{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Demeter</h1>
-    <p class="subtitle">Original Artwork | Helmamay Studios</p>
-    <a class="back" href="index.html">← Back to Gallery</a>
-  </header>
-
-  <main>
-    <img class="original" src="2026-09-26_180448.jpg" alt="Demeter original artwork">
-
-    <div class="gallery">
-      <figure>
-        <img src="demeter9.png" alt="Demeter displayed in an interior setting">
-      </figure>
-      <figure>
-        <img src="demeter2.png" alt="Demeter displayed in an interior setting">
-      </figure>
-      <figure>
-        <img src="demeter10.png" alt="Demeter displayed in an interior setting">
-      </figure>
-      <figure>
-        <img src="demeter8.png" alt="Demeter displayed in an interior setting">
-      </figure>
-      <figure>
-        <img src="demeter4.png" alt="Demeter displayed in an interior setting">
-      </figure>
-    </div>
-  </main>
+<header><h1>Demeter</h1><p class="subtitle">Original Artwork | Helmamay Studios</p><a class="back" href="index.html">← Back to Gallery</a></header>
+<main>
+<img class="original" src="2026-09-26_180448.jpg" alt="Demeter original artwork">
+<div class="gallery">
+      <figure><img src="demeter9.png" alt="Demeter displayed in an interior setting" loading="lazy"></figure>
+      <figure><img src="demeter2.png" alt="Demeter displayed in an interior setting" loading="lazy"></figure>
+      <figure><img src="demeter10.png" alt="Demeter displayed in an interior setting" loading="lazy"></figure>
+      <figure><img src="demeter8.png" alt="Demeter displayed in an interior setting" loading="lazy"></figure>
+      <figure><img src="demeter4.png" alt="Demeter displayed in an interior setting" loading="lazy"></figure>
+</div>
+<section class="customize" aria-labelledby="customize-title">
+<h2 id="customize-title">Customize This Artwork</h2>
+<p>Explore frame and mat combinations, then request a trade quote for your project. Preview is illustrative; final proportions vary by print size.</p>
+<div class="preview-area"><div class="frame" id="preview-frame"><div class="mat" id="preview-mat"><img src="2026-09-26_180448.jpg" alt="Demeter artwork framing preview"></div></div></div>
+<form id="quote-form" action="https://formspree.io/f/xeaewlqp" method="POST">
+<input type="hidden" name="Artwork" value="Demeter"><input type="hidden" name="_subject" value="Helmamay Studios trade quote request — Demeter">
+<div class="field"><label for="print-size">Print size</label><select id="print-size" name="Print size" required><option>8 × 10 inches</option><option>16 × 20 inches</option><option>24 × 30 inches</option><option>Custom size (specify below)</option></select></div>
+<div class="field"><label for="quantity">Quantity</label><input id="quantity" name="Quantity" type="number" min="1" value="1" required></div>
+<div class="field"><label for="frame-finish">Frame finish</label><select id="frame-finish" name="Frame finish"><option>Natural Wood</option><option>Black</option><option>White</option></select></div>
+<div class="field"><label for="matting">Matting</label><select id="matting" name="Matting"><option>White</option><option>Ivory</option><option>No Mat</option></select></div>
+<div class="field"><label for="client-name">Your name</label><input id="client-name" name="Name" autocomplete="name" required></div>
+<div class="field"><label for="company">Company / Design Studio</label><input id="company" name="Company" required></div>
+<div class="field"><label for="email">Email</label><input id="email" name="Email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="phone">Phone (optional)</label><input id="phone" name="Phone" type="tel" autocomplete="tel"></div>
+<div class="field full"><label for="location">Project location (optional)</label><input id="location" name="Project location"></div>
+<div class="field full"><label for="notes">Custom size or project notes (optional)</label><textarea id="notes" name="Project notes" rows="4"></textarea></div>
+<div class="full"><button type="submit" id="submit-button">Request Trade Quote</button></div>
+<p id="form-status" role="status" aria-live="polite"></p>
+</form>
+</section>
+</main>
+<script>
+const finish=document.getElementById('frame-finish');const matting=document.getElementById('matting');
+function updatePreview(){const frameColors={'Natural Wood':'#9c744d','Black':'#252525','White':'#f4f2ed'};document.getElementById('preview-frame').style.background=frameColors[finish.value];const mat=document.getElementById('preview-mat');mat.style.background=matting.value==='Ivory'?'#e9dfc9':'#fffef8';mat.style.padding=matting.value==='No Mat'?'0':'26px';}
+finish.addEventListener('change',updatePreview);matting.addEventListener('change',updatePreview);updatePreview();
+const form=document.getElementById('quote-form');form.addEventListener('submit',async event=>{event.preventDefault();const button=document.getElementById('submit-button'),status=document.getElementById('form-status');button.disabled=true;status.textContent='Sending your request…';try{const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});if(!response.ok)throw new Error('Submission failed');status.textContent='Thank you! Your trade quote request has been sent.';form.reset();updatePreview();}catch(error){status.textContent='We could not send your request. Please try again.';}finally{button.disabled=false;}});
+</script>
 </body>
 </html>
