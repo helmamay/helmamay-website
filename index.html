@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Helmamay Studios | Art & Design</title>
   <style>
-    :root { --paper:#f8f5ee; --ink:#292621; --line:#ded8ce; }
+    :root { --paper:#faf8f3; --ink:#292621; --line:#ded8ce; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
@@ -24,9 +24,12 @@
   padding: 55px 15px 45px;
   border-top: 1px solid var(--line);
 }
+    .trade-intro { max-width:900px; margin:48px auto 0; padding-top:38px; border-top:1px solid var(--line); }
+    .trade-intro p { margin:0 auto; max-width:760px; line-height:1.8; font-size:18px; }
+    .trade-intro .trade-label { margin-top:22px; color:#77716a; font-size:12px; letter-spacing:2px; }
     .eyebrow { font-size:11px; letter-spacing:3px; text-transform:uppercase; }
     h1 { font-family:Georgia,serif; font-size:clamp(36px,5vw,64px); font-weight:400; margin:23px 0; }
-    .intro p:last-child {
+    .intro > p:not(.eyebrow) {
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.8;
@@ -98,15 +101,16 @@
     <nav aria-label="Main navigation">
       <a href="#artwork">ARTWORK</a>
       <a href="#about">ABOUT</a>
-      <a href="#shop">SHOP</a>
+      <a href="#shop">FOR DESIGNERS</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="intro">
-      <p class="eyebrow">Independent Art & Design Studio</p>
-      <h1>An Exploration of Art & Design</h1>
-      <p>Helmamay Studios is an independent creative studio where a fascination with color, form, and pattern takes shape through original artwork and distinctive designs. Each creation reflects a spirit of curiosity, experimentation, and the freedom to explore beyond convention.</p>
+      <p class="eyebrow">HELMAMAY STUDIOS</p>
+      <h1>Art That Defines a Space.</h1>
+      <p>Expressive abstract artwork for residential and commercial spaces.</p>
+      <div class="trade-intro"><p>Fine-art prints, thoughtfully tailored in size and presentation for interior design professionals.</p><p class="trade-label">EXCLUSIVELY TO THE TRADE</p></div>
     </section>
 
     <section id="artwork">
@@ -262,10 +266,11 @@
 
 
     <section id="shop" class="shop">
-      <p class="eyebrow">Discover the Collection</p>
-      <h2>Bring Art Into Your Space</h2>
-     <p>Discover original artwork, colorful prints, and distinctive designs created to bring a little personality and something unexpected into your space.</p>
-      <a class="shop-link" href="https://www.etsy.com/shop/Helmamay" target="_blank" rel="noopener noreferrer">VISIT THE ETSY SHOP ↗</a>
+      <p class="eyebrow">For Design Professionals</p>
+      <h2>Artwork Tailored to Your Project</h2>
+      <p>Helmamay Studios works with interior designers and decorators on residential and commercial projects. Inquire about print sizes, matting, framing, and quantities suited to your project.</p>
+      <p>Serving northern New Jersey and the New York metropolitan area. Local pickup or delivery by arrangement.</p>
+      <a class="shop-link" href="mailto:hello@helmamay.com?subject=Helmamay%20Studios%20Trade%20Inquiry">REQUEST A QUOTE ↗</a>
     </section>
   </main>
 
