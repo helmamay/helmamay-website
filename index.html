@@ -74,9 +74,24 @@
     .section-heading p { font-size:11px; letter-spacing:2px; text-transform:uppercase; }
     .gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:34px 25px; }
     .artwork { margin:0; }
-.art-space { background:transparent; border:none; display:flex; align-items:center; justify-content:center; padding:0; }
+.art-space {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 360px;
+  padding: 0;
+}
     .art-space span { color:#827a70; font-family:Georgia,serif; font-size:17px; font-style:italic; text-align:center; }
-    .art-space img { display:block; width:100%; height:100%; object-fit:contain; }
+    .art-space img {
+  display: block;
+  max-width: 100%;
+  max-height: 360px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
     figcaption { padding-top:14px; font-family:Georgia,serif; font-size:18px; }
     figcaption small { display:block; margin-top:6px; font-family:Arial,sans-serif; font-size:12px; color:#706a62; }
    
@@ -154,7 +169,7 @@ margin: 45px auto 0;
       <div class="gallery">
 <figure class="artwork">
           <a href="lemon-lime.html">
-         <div class="art-space"><img src="lemon lime.jpg" alt="Original artwork by Helmamay Studios" style="width:100%; height:100%; object-fit:contain;"></div>
+         <div class="art-space"><img src="lemon lime.jpg" alt="Original artwork by Helmamay Studios"></div>
           </a><figcaption>Pomona<small>Original artwork</small></figcaption>
            
         </figure>
@@ -162,7 +177,7 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="theia.html" style="display:block; width:100%; height:100%;">
-      <img src="Theia.png" alt="Theia original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="Theia.png" alt="Theia original artwork">
     </a>
   </div>
   <figcaption>Theia<small>Original artwork</small></figcaption>
@@ -171,7 +186,7 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="cerci.html" style="display:block; width:100%; height:100%;">
-      <img src="cerci.jpg" alt="Cerci original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="cerci.jpg" alt="Cerci original artwork">
     </a>
   </div>
   <figcaption>Cerci<small>Original artwork</small></figcaption>
@@ -180,7 +195,7 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="inner-orbit.html" style="display:block; width:100%; height:100%;">
-      <img src="a24%20red%20purple.jpg" alt="Inner Orbit original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="a24%20red%20purple.jpg" alt="Inner Orbit original artwork">
     </a>
   </div>
   <figcaption>Erato<small>Original artwork</small></figcaption>
@@ -189,7 +204,7 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="salus.html" style="display:block; width:100%; height:100%;">
-      <img src="salus.jpg" alt="Salus original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="salus.jpg" alt="Salus original artwork">
     </a>
   </div>
   <figcaption>Salus<small>Original artwork</small></figcaption>
@@ -198,14 +213,14 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="convergence.html" style="display:block; width:100%; height:100%;">
-    <img src="a22%20pink%20yellow.jpg" alt="Pink and yellow original artwork" style="width:100%; height:100%; object-fit:contain;">
+    <img src="a22%20pink%20yellow.jpg" alt="Pink and yellow original artwork">
   </a></div><figcaption>Aurora<small>Original artwork</small></figcaption>
 </figure>
 
 <figure class="artwork">
   <div class="art-space">
     <a href="feronia.html" style="display:block; width:100%; height:100%;">
-      <img src="Feronia.jpg" alt="Feronia original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="Feronia.jpg" alt="Feronia original artwork">
     </a>
   </div>
   <figcaption>Feronia<small>Original artwork</small></figcaption>
@@ -214,7 +229,7 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="kaleidoscope.html" style="display:block; width:100%; height:100%;">
-      <img src="a8%20pastel.jpg" alt="Kaleidoscope original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="a8%20pastel.jpg" alt="Kaleidoscope original artwork">
     </a>
   </div>
 <figcaption>Juventas<small>Original artwork</small></figcaption>
@@ -223,7 +238,7 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="aglaia.html" style="display:block; width:100%; height:100%;">
-      <img src="Aglaia.JPG" alt="Aglaia original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="Aglaia.JPG" alt="Aglaia original artwork">
     </a>
   </div>
   <figcaption>Aglaia<small>Original artwork</small></figcaption>
@@ -232,7 +247,7 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="gaia.html" style="display:block; width:100%; height:100%;">
-      <img src="terra.jpg" alt="Gaia original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="terra.jpg" alt="Gaia original artwork">
     </a>
   </div>
   <figcaption>Gaia<small>Original artwork</small></figcaption>
@@ -241,7 +256,7 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="interplay.html" style="display:block; width:100%; height:100%;">
-      <img src="a13%20blue%20red.jpg" alt="Interplay original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="a13%20blue%20red.jpg" alt="Interplay original artwork">
     </a>
   </div><figcaption>Nerio<small>Original artwork</small></figcaption>
 </figure>
@@ -249,7 +264,7 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="fortuna.html" style="display:block; width:100%; height:100%;">
-      <img src="Fortuna_website.jpg" alt="Fortuna original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="Fortuna_website.jpg" alt="Fortuna original artwork">
     </a>
   </div>
   <figcaption>Fortuna<small>Original artwork</small></figcaption>
@@ -258,7 +273,7 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="demeter.html" style="display:block; width:100%; height:100%;">
-      <img src="2026-09-26_180448.jpg" alt="Demeter original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="2026-09-26_180448.jpg" alt="Demeter original artwork">
     </a>
   </div>
   <figcaption>Demeter<small>Original artwork</small></figcaption>
@@ -267,7 +282,7 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="entanglement.html" style="display:block; width:100%; height:100%;">
-      <img src="a15%20green%20purple.jpg" alt="Entanglement original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="a15%20green%20purple.jpg" alt="Entanglement original artwork">
     </a>
   </div>
   <figcaption>Terra<small>Original artwork</small></figcaption>
@@ -276,7 +291,7 @@ margin: 45px auto 0;
 <figure class="artwork">
   <div class="art-space">
     <a href="selene.html" style="display:block; width:100%; height:100%;">
-      <img src="Selene.jpg" alt="Selene original artwork" style="width:100%; height:100%; object-fit:contain;">
+      <img src="Selene.jpg" alt="Selene original artwork">
     </a>
   </div>
   <figcaption>Selene<small>Original artwork</small></figcaption>
@@ -284,7 +299,7 @@ margin: 45px auto 0;
       <figure class="artwork">
         <div class="art-space">
           <a href="calyce.html" style="display:block; width:100%; height:100%;">
-            <img src="Calyce_1.jpg" alt="Calyce original artwork" style="width:100%; height:100%; object-fit:contain;">
+            <img src="Calyce_1.jpg" alt="Calyce original artwork">
           </a>
         </div>
         <figcaption>Calyce<small>Original artwork</small></figcaption>
