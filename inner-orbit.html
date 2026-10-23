@@ -56,20 +56,7 @@
 </main>
 <script>
 (function(){
- const frame=document.getElementById('preview-frame');
- const mat=document.getElementById('preview-mat');
- const frameChoice=document.getElementById('frame-choice');
- const matChoice=document.getElementById('mat-choice');
- function update(){
-   const finishes={'Natural wood':'#9c744d','Black':'#252525','White':'#f4f2ed'};
-   frame.style.setProperty('--frame-color',finishes[frameChoice.value]);
-   mat.classList.toggle('none',matChoice.value==='No mat');
-   mat.style.background=matChoice.value==='Ivory'?'#e9dfc9':'#fffef8';
- }
- frameChoice.addEventListener('change',update);
- matChoice.addEventListener('change',update);
- update();
- const form=document.getElementById('quote-form');
+const form=document.getElementById('quote-form');
  const submit=document.getElementById('submit-quote');
  const status=document.getElementById('status');
  form.addEventListener('submit',async function(event){
@@ -103,5 +90,6 @@
  });
 })();
 </script>
+<script src="customizer.js" defer></script>
 </body>
 </html>

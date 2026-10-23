@@ -78,19 +78,7 @@
     </section>
   </main>
   <script>
-    const frameFinish = document.getElementById('frame-finish');
-    const matting = document.getElementById('matting');
-    const framePreview = document.getElementById('frame-preview');
-    const matPreview = document.getElementById('mat-preview');
-    function updatePreview() {
-      framePreview.style.backgroundColor = { 'Natural wood': '#9c744d', 'Black': '#252525', 'White': '#f4f2ed' }[frameFinish.value];
-      matPreview.style.backgroundColor = { 'White': '#fffef8', 'Ivory': '#e9dfc9', 'No mat': 'transparent' }[matting.value];
-      matPreview.style.padding = matting.value === 'No mat' ? '0' : '';
-    }
-    frameFinish.addEventListener('change', updatePreview);
-    matting.addEventListener('change', updatePreview);
-    updatePreview();
-    const form = document.getElementById('quote-form');
+const form = document.getElementById('quote-form');
     const status = document.getElementById('form-status');
     const submit = document.getElementById('submit-quote');
     form.addEventListener('submit', async function (event) {
@@ -102,11 +90,12 @@
         if (!response.ok) throw new Error('Submission failed');
         status.textContent = 'Thank you! Your trade quote request has been sent.';
         form.reset();
-        updatePreview();
+        window.HelmamayCustomizer.updatePreview();
       } catch (error) {
         status.textContent = 'Your request could not be sent. Please try again.';
       } finally { submit.disabled = false; }
     });
   </script>
+<script src="customizer.js" defer></script>
 </body>
 </html>

@@ -82,19 +82,7 @@
     </section>
   </main>
   <script>
-    const frameFinish = document.getElementById('frame-finish');
-    const matting = document.getElementById('matting');
-    const framePreview = document.getElementById('frame-preview');
-    const matPreview = document.getElementById('mat-preview');
-    function updatePreview() {
-      framePreview.style.background = { wood: '#9c744d', black: '#252525', white: '#f4f2ed' }[frameFinish.value];
-      matPreview.style.background = { white: '#fffef8', ivory: '#e9dfc9', none: 'transparent' }[matting.value];
-      matPreview.style.padding = matting.value === 'none' ? '0' : '26px';
-    }
-    frameFinish.addEventListener('change', updatePreview);
-    matting.addEventListener('change', updatePreview);
-    updatePreview();
-    const form = document.getElementById('trade-form');
+const form = document.getElementById('trade-form');
     const status = document.getElementById('form-status');
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
@@ -106,11 +94,12 @@
         if (!response.ok) throw new Error('Submission failed');
         status.textContent = 'Thank you. Your trade quote request has been sent.';
         form.reset();
-        updatePreview();
+        window.HelmamayCustomizer.updatePreview();
       } catch (error) {
         status.textContent = 'Your request could not be sent. Please try again.';
       } finally { button.disabled = false; }
     });
   </script>
+<script src="customizer.js" defer></script>
 </body>
 </html>

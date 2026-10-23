@@ -50,12 +50,9 @@
 </section>
 </main>
 <script>
-const frame=document.getElementById('frame'),mat=document.getElementById('mat');
-const frameSelect=document.getElementById('frame-finish'),matSelect=document.getElementById('mat-choice');
-function updatePreview(){frame.style.background=({'Natural Wood':'#9c744d','Black':'#252525','White':'#f4f2ed'})[frameSelect.value];mat.style.background=({'White':'#fffef8','Ivory':'#e9dfc9','No Mat':'transparent'})[matSelect.value];mat.style.padding=matSelect.value==='No Mat'?'0':'30px';}
-frameSelect.addEventListener('change',updatePreview);matSelect.addEventListener('change',updatePreview);updatePreview();
 const form=document.getElementById('quote-form'),status=document.getElementById('status'),submit=document.getElementById('submit');
-form.addEventListener('submit',async function(e){e.preventDefault();status.textContent='Sending your request…';submit.disabled=true;try{const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});if(!response.ok)throw new Error('Submission failed');status.textContent='Thank you. Your trade quote request has been sent.';form.reset();updatePreview();}catch(err){status.textContent='Your request could not be sent. Please try again.';}finally{submit.disabled=false;}});
+form.addEventListener('submit',async function(e){e.preventDefault();status.textContent='Sending your request…';submit.disabled=true;try{const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});if(!response.ok)throw new Error('Submission failed');status.textContent='Thank you. Your trade quote request has been sent.';form.reset();window.HelmamayCustomizer.updatePreview();}catch(err){status.textContent='Your request could not be sent. Please try again.';}finally{submit.disabled=false;}});
 </script>
+<script src="customizer.js" defer></script>
 </body>
 </html>
