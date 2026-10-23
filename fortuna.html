@@ -45,12 +45,10 @@
 </main>
 <script>
 (function(){
-const frame=document.getElementById('framePreview');const mat=document.getElementById('matPreview');const frameSelect=document.getElementById('frameFinish');const matSelect=document.getElementById('matting');
-function updatePreview(){const finishes={'Natural Wood':'#9c744d','Black':'#252525','White':'#f4f2ed'};frame.style.background=finishes[frameSelect.value]||finishes['Natural Wood'];const colors={'White':'#fffef8','Ivory':'#e9dfc9','No Mat':'transparent'};mat.style.background=colors[matSelect.value]||colors.White;mat.style.padding=matSelect.value==='No Mat'?'0':'28px';}
-frameSelect.addEventListener('change',updatePreview);matSelect.addEventListener('change',updatePreview);updatePreview();
 const form=document.getElementById('quoteForm');const status=document.getElementById('formStatus');const button=form.querySelector('button[type="submit"]');
-form.addEventListener('submit',async function(event){event.preventDefault();button.disabled=true;status.textContent='Sending your request…';try{const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});if(response.ok){status.textContent='Thank you. Your quote request has been sent.';form.reset();updatePreview();}else{status.textContent='Your request could not be sent. Please try again.';}}catch(error){status.textContent='Connection problem. Please try again.';}finally{button.disabled=false;}});
+form.addEventListener('submit',async function(event){event.preventDefault();button.disabled=true;status.textContent='Sending your request…';try{const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});if(response.ok){status.textContent='Thank you. Your quote request has been sent.';form.reset();window.HelmamayCustomizer.updatePreview();}else{status.textContent='Your request could not be sent. Please try again.';}}catch(error){status.textContent='Connection problem. Please try again.';}finally{button.disabled=false;}});
 })();
 </script>
+<script src="customizer.js" defer></script>
 </body>
 </html>
