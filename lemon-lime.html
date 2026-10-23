@@ -45,6 +45,13 @@
     <option value="Unstretched canvas">Unstretched canvas</option>
   </select>
 </div>
+  <div class="field" id="canvas-sides-field" style="display:none;">
+  <label for="canvas-sides">Canvas side color</label>
+  <select id="canvas-sides" name="canvas_side_color" disabled>
+    <option value="White">White</option>
+    <option value="Black">Black</option>
+  </select>
+</div>
  <div class="field">
   <label for="mat-choice">Matting</label>
   <select id="mat-choice" name="matting">
@@ -134,5 +141,6 @@ matChoice.closest('.field').style.display = isPaper ? '' : 'none';
  });
 })();
 </script>
+  <script src="customizer.js" defer></script>
 </body>
 </html>
