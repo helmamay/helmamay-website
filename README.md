@@ -45,3 +45,23 @@ Before rollout, Pomona was tested first. Its previous shared script did not
 update the frame or mat selection; the shared preview implementation repairs it.
 The existing quote form passed intercepted submission checks before and after.
 Desktop/mobile previews were inspected for Pomona, Aglaia, Gaia, and Nerio.
+
+## Framing guide and finish requests
+
+The shared script inserts a collapsed Print & framing guide on every artwork
+page. Its nine clickable, keyboard-accessible finish swatches mirror the frame
+select and never submit the quote form. Wood grain and metallic gradients are
+illustrations; they do not modify the artwork image or represent physical samples.
+Ornate gold adds a simple decorative edge cue rather than simulating an actual
+carved frame. It is available for paper-framing requests only, not canvas floaters.
+
+New finishes are requests subject to local framer confirmation. The guide explains
+paper, gallery wrap, floating frames, unstretched canvas, matting, outside dimensions,
+and local pickup/delivery. No stock availability, exact materials, or prices are
+promised. Finish lists, preview appearances, guide content, and styles are maintained
+in customizer.js. Actual local-framer availability remains unverified.
+
+The tests also cover all nine swatches, selection and quote-field synchronization,
+keyboard activation, non-submission by swatch buttons, media restrictions, reset,
+and preservation of the existing submission flow. A real inbox-delivery test is
+separate and requires approval of its exact message and destination.

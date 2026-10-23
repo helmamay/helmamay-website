@@ -31,6 +31,38 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 20));
         window.testControls = {form, frame:byIds('preview-frame','frame-preview','framePreview','frame'),mat:byIds('preview-mat','mat-preview','matPreview','mat'),finish:byIds('frame-choice','frame-finish','frameFinish'),matting:byIds('mat-choice','matting','matChoice'),size:byIds('print-size','printSize')};
         return {artwork:form.querySelector('[name="artwork"], [name="Artwork"]').value,action:form.action};
       });
+      assert.equal(await page.locator('.helmamay-guide').count(),1,file);
+      assert.equal(await page.locator('.helmamay-guide').getAttribute('open'),null,file);
+      await page.locator('.helmamay-guide summary').click();
+      assert.equal(await page.locator('.helmamay-finish-grid button').count(),9,file);
+      const finishes = ['Natural wood','Black','White','Walnut','Dark wood','Brass','Chrome','Gold','Ornate gold'];
+      for (const finish of finishes) {
+        const swatch = page.getByRole('button',{name:'Preview '+finish+' frame',exact:true});
+        await swatch.click();
+        assert.equal(await swatch.getAttribute('aria-pressed'),'true',file);
+        const selected = await page.evaluate(()=>({
+          label:testControls.finish.selectedOptions[0].textContent,
+          value:new FormData(testControls.form).get(testControls.finish.name),
+          expected:testControls.finish.value,
+          background:testControls.frame.style.background
+        }));
+        assert.equal(selected.label,finish,file);
+        assert.equal(selected.value,selected.expected,file);
+        assert(selected.background.length>0,file);
+        assert.equal(requests.length,0,file+' swatches must never submit a quote');
+      }
+      await page.selectOption('#print-medium','Canvas with floating frame');
+      assert.equal(await page.getByRole('button',{name:'Preview Ornate gold frame',exact:true}).isDisabled(),true,file);
+      assert.equal(await page.evaluate(()=>testControls.finish.selectedOptions[0].textContent),'Natural wood',file);
+      await page.selectOption('#print-medium','Fine-art paper');
+      const walnut = page.getByRole('button',{name:'Preview Walnut frame',exact:true});
+      await walnut.focus();await page.keyboard.press('Enter');
+      assert.equal(await page.evaluate(()=>testControls.finish.value),'Walnut',file);
+      assert.equal(requests.length,0,file);
+      await page.evaluate(()=>testControls.form.reset());
+      await page.waitForFunction(()=>document.querySelector('#canvas-sides').disabled);
+      assert.equal(await page.evaluate(()=>testControls.finish.selectedIndex),0,file);
+      await page.locator('.helmamay-guide summary').click();
       assert.equal(snapshot.action, 'https://formspree.io/f/xeaewlqp');
       assert.equal(await page.locator('#print-medium option').count(),4);
       assert.equal(await page.locator('#canvas-sides option').count(),2);
@@ -43,6 +75,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 20));
         assert.equal(state.matDisabled,medium!=='Fine-art paper',file);
         assert.equal(state.frameDisabled,!['Fine-art paper','Canvas with floating frame'].includes(medium),file);
         assert.equal(state.sideDisabled,medium!=='Gallery-wrapped canvas',file);
+        assert.equal(await page.getByRole('button',{name:'Preview Walnut frame',exact:true,includeHidden:true}).isDisabled(),!['Fine-art paper','Canvas with floating frame'].includes(medium),file);
         assert.equal(state.keys.includes(state.matName),!state.matDisabled,file);
         assert.equal(state.keys.includes(state.frameName),!state.frameDisabled,file);
         assert.equal(state.keys.includes('canvas_side_color'),!state.sideDisabled,file);
