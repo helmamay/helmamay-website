@@ -65,3 +65,9 @@ The tests also cover all nine swatches, selection and quote-field synchronizatio
 keyboard activation, non-submission by swatch buttons, media restrictions, reset,
 and preservation of the existing submission flow. A real inbox-delivery test is
 separate and requires approval of its exact message and destination.
+
+Canvas-preview layout regression: run `node tests/preview-layout.cjs`. This loads
+real artwork assets and verifies that preview containers fit their images at
+1200px, 390px, and 320px viewport widths for all 16 pages and all canvas media.
+The shared `.custom-layout` image sizing avoids a spare colored strip caused by
+cyclic percentage sizing; source artwork and page HTML are unchanged.
