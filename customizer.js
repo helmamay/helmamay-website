@@ -77,6 +77,8 @@
       const style = document.createElement('style');
       style.id = 'helmamay-guide-styles';
       style.textContent = `
+        /* A definite width avoids spare frame space from cyclic percentage sizing. */
+        .customize .custom-layout .mat img{width:260px;max-width:100%}
         .helmamay-guide{max-width:820px;margin:26px auto 32px;border:1px solid #d8d0c3;background:#f6f2ea;text-align:left}
         .helmamay-guide summary{padding:17px 20px;cursor:pointer;font:18px Georgia,serif;color:#292724}
         .helmamay-guide-body{padding:0 20px 22px;color:#5d5851;font:15px/1.6 Georgia,serif}
