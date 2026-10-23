@@ -26,6 +26,26 @@
       "White"
     ]
   };
+function updateCanvasOptions() {
+  const printMedium = document.getElementById("print-medium");
+  const canvasSides = document.getElementById("canvas-sides");
 
+  if (!printMedium || !canvasSides) return;
+
+  const isGalleryCanvas =
+    printMedium.value === "Gallery-wrapped canvas";
+
+  canvasSides.closest(".field").style.display =
+    isGalleryCanvas ? "" : "none";
+
+  canvasSides.disabled = !isGalleryCanvas;
+} document.addEventListener("DOMContentLoaded", function () {
+  const printMedium = document.getElementById("print-medium");
+
+  if (printMedium) {
+    printMedium.addEventListener("change", updateCanvasOptions);
+    updateCanvasOptions();
+  }
+});
   window.HelmamayCustomizer = customizationOptions;
 })();
