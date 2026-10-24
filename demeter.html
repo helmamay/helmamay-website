@@ -23,6 +23,7 @@ form{max-width:670px;margin:0 auto;text-align:left;display:grid;grid-template-co
 #form-status{grid-column:1/-1;margin:0;min-height:1.5em}
 @media(max-width:650px){.gallery{grid-template-columns:1fr}h1{font-size:30px}form{grid-template-columns:1fr}}
 </style>
+  <link rel="stylesheet" href="social-links.css">
 </head>
 <body>
 <header><h1>Demeter</h1><p class="subtitle">Original Artwork | Helmamay Studios</p><a class="back" href="index.html">← Back to Gallery</a></header>
@@ -56,9 +57,14 @@ form{max-width:670px;margin:0 auto;text-align:left;display:grid;grid-template-co
 </form>
 </section>
 </main>
+  <footer class="studio-footer">
+    <p>© Helmamay Studios · Original Art &amp; Design</p>
+  </footer>
 <script>
 const form=document.getElementById('quote-form');form.addEventListener('submit',async event=>{event.preventDefault();const button=document.getElementById('submit-button'),status=document.getElementById('form-status');button.disabled=true;status.textContent='Sending your request…';try{const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});if(!response.ok)throw new Error('Submission failed');status.textContent='Thank you! Your trade quote request has been sent.';form.reset();window.HelmamayCustomizer.updatePreview();}catch(error){status.textContent='We could not send your request. Please try again.';}finally{button.disabled=false;}});
 </script>
 <script src="customizer.js" defer></script>
+  <script src="social-links.js" defer></script>
 </body>
 </html>
+

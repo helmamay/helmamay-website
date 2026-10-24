@@ -9,6 +9,7 @@
 <style>
 *{box-sizing:border-box}body{margin:0;background:#faf8f3;color:#292724;font-family:Georgia,serif;text-align:center}header{padding:60px 20px 35px}h1{font-size:48px;font-weight:normal;margin:0 0 12px}.subtitle{color:#77716a;font-size:16px;letter-spacing:1px}.back{display:inline-block;margin-top:20px;color:#292724;text-decoration:none;border-bottom:1px solid #292724;padding-bottom:4px}main{max-width:1100px;margin:auto;padding:20px 24px 80px}.original{display:block;max-width:280px;max-height:850px;width:auto;height:auto;margin:0 auto 65px;object-fit:contain}.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:35px}figure{margin:0}figure img{display:block;width:100%;height:auto}.customize{margin:85px auto 30px;border-top:1px solid #ded8ce;padding-top:55px}.customize h2{font-size:32px;font-weight:normal}.customize>p{color:#6b655e;line-height:1.6}.custom-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,1fr);gap:45px;text-align:left;align-items:start;margin-top:35px}.preview-area{background:#e9e5dc;min-height:450px;display:flex;justify-content:center;align-items:center;padding:35px 22px}.frame{--frame-color:#9c744d;background:var(--frame-color);padding:13px;box-shadow:4px 9px 18px #0003;max-width:100%;transition:background .2s}.mat{background:#fffef8;padding:27px;transition:padding .2s,background .2s}.mat.none{padding:0}.mat img{display:block;width:min(100%,260px);max-height:330px;object-fit:contain;background:white}.controls label{display:block;margin:0 0 8px;font-size:14px}.field{margin-bottom:22px}.controls select,.controls input{width:100%;padding:12px;border:1px solid #bcb5aa;background:#fffefa;color:#292724;font:15px Georgia,serif}.controls button{padding:15px 20px;background:#292724;color:white;border:0;font:13px Arial,sans-serif;letter-spacing:1px;cursor:pointer;width:100%}.controls button:hover{background:#4b443d}.fineprint{font-size:12px;color:#777;line-height:1.6;margin-top:15px}.status{font-size:14px;color:#615a52;margin-top:12px;line-height:1.5}.controls textarea{width:100%;padding:12px;border:1px solid #bcb5aa;background:#fffefa;color:#292724;font:15px Georgia,serif;min-height:110px;resize:vertical}.form-heading{font-size:23px;font-weight:normal;margin:30px 0 20px}.controls button:disabled{opacity:.6;cursor:wait}.success{color:#315c3d}.error{color:#9b3535}@media(max-width:700px){.custom-layout{grid-template-columns:1fr}.preview-area{min-height:360px}h1{font-size:36px}.gallery{grid-template-columns:1fr}}
 </style>
+  <link rel="stylesheet" href="social-links.css">
 </head>
 <body>
 <header><h1>Feronia</h1><p class="subtitle">Original Artwork | Helmamay Studios</p><a class="back" href="index.html">← Back to Gallery</a></header>
@@ -48,6 +49,9 @@
 </form>
 </div></div></section>
 </main>
+  <footer class="studio-footer">
+    <p>© Helmamay Studios · Original Art &amp; Design</p>
+  </footer>
 <script>
 (function(){
 const form=document.getElementById('quote-form');
@@ -81,5 +85,7 @@ const form=document.getElementById('quote-form');
 })();
 </script>
 <script src="customizer.js" defer></script>
+  <script src="social-links.js" defer></script>
 </body>
 </html>
+
