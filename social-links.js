@@ -3,8 +3,8 @@
   'use strict';
   const profiles = [
     { name: 'Instagram', url: 'https://www.instagram.com/helmamaystudios/' },
-    { name: 'Facebook', url: '' },
-    { name: 'LinkedIn', url: '' }
+    { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61595458545423' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/susan-hollandsworth-bb8b162b3/' }
   ];
   const footer = document.querySelector('.studio-footer');
   if (!footer) return;
