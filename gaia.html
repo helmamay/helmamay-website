@@ -15,11 +15,12 @@
 *{box-sizing:border-box}body{margin:0;background:#faf8f3;color:#292724;font-family:Georgia,serif;text-align:center}header{padding:60px 20px 35px}h1{font-size:48px;font-weight:normal;margin:0 0 12px}.subtitle{color:#77716a;font-size:16px;letter-spacing:1px}.back{display:inline-block;margin-top:20px;color:#292724;text-decoration:none;border-bottom:1px solid #292724;padding-bottom:4px}main{max-width:1100px;margin:auto;padding:20px 24px 80px}.original{display:block;max-width:280px;max-height:850px;width:auto;height:auto;margin:0 auto 65px;object-fit:contain}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:35px}figure{margin:0}figure img{display:block;width:100%;height:auto}.customize{margin:85px auto 0;max-width:820px;border-top:1px solid #ded9d0;padding-top:45px}.customize h2{font-weight:normal;font-size:30px}.intro{line-height:1.6;color:#67625d}.preview-area{margin:32px auto 38px;display:flex;justify-content:center}.frame{background:#9c744d;padding:13px;box-shadow:0 5px 18px #0002;max-width:100%}.mat{background:#fffef8;padding:28px;max-width:100%}.mat img{display:block;max-width:100%;width:240px;height:auto;max-height:430px;object-fit:contain}.quote-form{text-align:left;max-width:610px;margin:0 auto}.quote-form label{display:block;margin:18px 0 6px;font-size:15px}.quote-form input,.quote-form select,.quote-form textarea{display:block;width:100%;padding:12px;border:1px solid #bdb7ad;border-radius:0;background:#fffefa;color:#292724;font:16px Georgia,serif}.quote-form button{margin-top:25px;padding:14px 25px;background:#292724;color:white;border:0;font:16px Georgia,serif;cursor:pointer}.quote-form button:disabled{opacity:.6;cursor:wait}.form-status{margin-top:16px;min-height:1.5em}.hint{font-size:13px;color:#77716a;margin-top:9px}@media(max-width:700px){h1{font-size:36px}.gallery{grid-template-columns:1fr}.mat img{width:200px}.customize{margin-top:60px}}
 </style>
   <link rel="stylesheet" href="social-links.css">
+  <link rel="stylesheet" href="background-color.css">
 </head>
 <body>
 <header><h1>Gaia</h1><p class="subtitle">Original Artwork | Helmamay Studios</p><a class="back" href="index.html">← Back to Gallery</a></header>
 <main>
-<img class="original" src="terra.jpg" alt="Gaia original artwork">
+<img data-color-preview class="original" src="terra.jpg" alt="Gaia original artwork">
 <div class="gallery">
 <figure><img src="terra2.png" alt="Gaia interior mockup 1"></figure>
 <figure><img src="terra4.png" alt="Gaia interior mockup 3"></figure>
@@ -30,8 +31,29 @@
 <section class="customize" aria-labelledby="customize-heading">
 <h2 id="customize-heading">Customize This Artwork</h2>
 <p class="intro">Explore frame and mat combinations, then request a personalized trade quote for your project.</p>
-<div class="preview-area"><div class="frame" id="framePreview"><div class="mat" id="matPreview"><img src="terra.jpg" alt="Gaia with selected frame and mat"></div></div></div>
+<div class="preview-area"><div class="frame" id="framePreview"><div class="mat" id="matPreview"><img data-color-preview src="terra.jpg" alt="Gaia with selected frame and mat"></div></div></div>
 <form id="quoteForm" class="quote-form" action="https://formspree.io/f/xeaewlqp" method="POST">
+<input type="hidden" id="background-value" name="artwork_background" value="Original white background">
+<fieldset id="background-controls" data-mask="gaia-background-mask.json" disabled>
+<legend>Artwork background color</legend>
+<label class="background-toggle"><input id="background-custom" type="checkbox"> Customize background color</label>
+<div class="background-swatches" role="group" aria-label="Suggested background colors">
+<button type="button" data-background-color="#FFFFFF" style="--swatch:#FFFFFF" aria-label="White background" aria-pressed="false"></button>
+<button type="button" data-background-color="#3F86B8" style="--swatch:#3F86B8" aria-label="Blue background" aria-pressed="false"></button>
+<button type="button" data-background-color="#3F677A" style="--swatch:#3F677A" aria-label="Dark blue background" aria-pressed="false"></button>
+<button type="button" data-background-color="#D7DCD2" style="--swatch:#D7DCD2" aria-label="Pale green background" aria-pressed="false"></button>
+<button type="button" data-background-color="#E9DFCE" style="--swatch:#E9DFCE" aria-label="Warm ivory background" aria-pressed="false"></button>
+</div>
+<div class="background-inputs">
+<div><label for="background-picker">Choose a color</label><input id="background-picker" type="color" value="#3f86b8" disabled></div>
+<div><label for="background-hex">HEX color code</label><input id="background-hex" type="text" value="#3F86B8" maxlength="7" pattern="#[0-9A-Fa-f]{6}" spellcheck="false" disabled></div>
+</div>
+<div class="field"><label for="background-reference">Paint brand / color reference (optional)</label><input id="background-reference" name="background_color_reference" type="text" placeholder="Brand and color name or number" disabled></div>
+<button type="button" id="background-reset">Restore original white background</button>
+<p class="fineprint">Color changes appear in the artwork and framing previews. Room mockups show the original version. Screen colors are illustrative. Final color will be confirmed with a print proof.</p>
+</fieldset>
+<p id="background-status" class="fineprint" role="status" aria-live="polite">Loading background color preview…</p>
+<noscript><p>For a custom background color, include your color reference in Project details.</p></noscript>
 <input type="hidden" name="Artwork" value="Gaia"><input type="hidden" name="_subject" value="Helmamay Studios trade quote request — Gaia">
 <label for="printSize">Print size</label><select id="printSize" name="Print size" required><option value="8 × 10 inches">8 × 10 inches</option><option value="16 × 20 inches">16 × 20 inches</option><option value="24 × 30 inches">24 × 30 inches</option><option value="Custom size">Custom size — describe below</option></select>
 <label for="frameFinish">Frame finish</label><select id="frameFinish" name="Frame finish" required><option value="Natural Wood">Natural Wood</option><option value="Black">Black</option><option value="White">White</option></select>
@@ -58,6 +80,7 @@ form.addEventListener('submit',async function(event){event.preventDefault();butt
 })();
 </script>
 <script src="customizer.js" defer></script>
+<script src="background-color.js" defer></script>
   <script src="social-links.js" defer></script>
 </body>
 </html>

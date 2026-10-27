@@ -10,11 +10,12 @@
 *{box-sizing:border-box}body{margin:0;background:#faf8f3;color:#292724;font-family:Georgia,serif;text-align:center}header{padding:60px 20px 35px}h1{font-size:48px;font-weight:normal;margin:0 0 12px}.subtitle{color:#77716a;font-size:16px;letter-spacing:1px}.back{display:inline-block;margin-top:20px;color:#292724;text-decoration:none;border-bottom:1px solid #292724;padding-bottom:4px}main{max-width:1100px;margin:auto;padding:20px 24px 80px}.original{display:block;max-width:280px;max-height:850px;width:auto;height:auto;margin:0 auto 65px;object-fit:contain}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:35px}.gallery figure{margin:0}.gallery img{display:block;width:100%;height:auto}.customize{max-width:850px;margin:85px auto 0;padding-top:40px;border-top:1px solid #dcd6ca}.customize h2{font-size:30px;font-weight:normal}.customize p{line-height:1.6;color:#69635c}.preview-stage{display:flex;justify-content:center;align-items:center;min-height:340px;padding:25px;background:#eee9df;margin:30px auto}.frame{background:#9c744d;padding:13px;box-shadow:0 8px 22px #0003;max-width:100%}.mat{background:#fffef8;padding:28px}.mat img{display:block;max-width:230px;max-height:310px;width:auto;height:auto;object-fit:contain}.quote-form{text-align:left;max-width:640px;margin:30px auto}.quote-form label{display:block;font-size:14px;margin:15px 0 6px}.quote-form select,.quote-form input,.quote-form textarea{width:100%;padding:12px;border:1px solid #c8c0b5;border-radius:0;background:#fffdf9;color:#292724;font:inherit;font-size:15px}.quote-form textarea{min-height:100px;resize:vertical}.quote-form button{display:block;width:100%;margin-top:24px;background:#292724;color:white;border:0;padding:15px;font:inherit;cursor:pointer}.quote-form button:hover{background:#514b44}.note{font-size:13px}.status{min-height:22px;text-align:center}@media(max-width:700px){h1{font-size:36px}.gallery{grid-template-columns:1fr}.preview-stage{padding:14px}.mat img{max-width:180px}.mat{padding:20px}}
 </style>
   <link rel="stylesheet" href="social-links.css">
+  <link rel="stylesheet" href="background-color.css">
 </head>
 <body>
 <header><h1>Selene</h1><p class="subtitle">Original Artwork | Helmamay Studios</p><a class="back" href="index.html">← Back to Gallery</a></header>
 <main>
-<img class="original" src="Selene.jpg" alt="Selene original artwork">
+<img data-color-preview class="original" src="Selene.jpg" alt="Selene original artwork">
 <div class="gallery">
       <figure><img src="Selene5.png" alt="Selene displayed in an interior setting" loading="lazy"></figure>
       <figure><img src="Selene6.png" alt="Selene displayed in an interior setting" loading="lazy"></figure>
@@ -25,8 +26,29 @@
 <section class="customize" aria-labelledby="customize-title">
 <h2 id="customize-title">Customize This Artwork</h2>
 <p>Explore frame and mat combinations, then request a trade quote for your project.</p>
-<div class="preview-stage"><div class="frame" id="framePreview"><div class="mat" id="matPreview"><img src="Selene.jpg" alt="Selene in selected frame and mat"></div></div></div>
+<div class="preview-stage"><div class="frame" id="framePreview"><div class="mat" id="matPreview"><img data-color-preview src="Selene.jpg" alt="Selene in selected frame and mat"></div></div></div>
 <form class="quote-form" id="quoteForm" action="https://formspree.io/f/xeaewlqp" method="POST">
+<input type="hidden" id="background-value" name="artwork_background" value="Original white background">
+<fieldset id="background-controls" data-mask="selene-background-mask.json" disabled>
+<legend>Artwork background color</legend>
+<label class="background-toggle"><input id="background-custom" type="checkbox"> Customize background color</label>
+<div class="background-swatches" role="group" aria-label="Suggested background colors">
+<button type="button" data-background-color="#FFFFFF" style="--swatch:#FFFFFF" aria-label="White background" aria-pressed="false"></button>
+<button type="button" data-background-color="#3F86B8" style="--swatch:#3F86B8" aria-label="Blue background" aria-pressed="false"></button>
+<button type="button" data-background-color="#3F677A" style="--swatch:#3F677A" aria-label="Dark blue background" aria-pressed="false"></button>
+<button type="button" data-background-color="#D7DCD2" style="--swatch:#D7DCD2" aria-label="Pale green background" aria-pressed="false"></button>
+<button type="button" data-background-color="#E9DFCE" style="--swatch:#E9DFCE" aria-label="Warm ivory background" aria-pressed="false"></button>
+</div>
+<div class="background-inputs">
+<div><label for="background-picker">Choose a color</label><input id="background-picker" type="color" value="#3f86b8" disabled></div>
+<div><label for="background-hex">HEX color code</label><input id="background-hex" type="text" value="#3F86B8" maxlength="7" pattern="#[0-9A-Fa-f]{6}" spellcheck="false" disabled></div>
+</div>
+<div class="field"><label for="background-reference">Paint brand / color reference (optional)</label><input id="background-reference" name="background_color_reference" type="text" placeholder="Brand and color name or number" disabled></div>
+<button type="button" id="background-reset">Restore original white background</button>
+<p class="fineprint">Color changes appear in the artwork and framing previews. Room mockups show the original version. Screen colors are illustrative. Final color will be confirmed with a print proof.</p>
+</fieldset>
+<p id="background-status" class="fineprint" role="status" aria-live="polite">Loading background color preview…</p>
+<noscript><p>For a custom background color, include your color reference in Project details.</p></noscript>
 <input type="hidden" name="artwork" value="Selene"><input type="hidden" name="_subject" value="Helmamay Studios trade quote request — Selene">
 <label for="frameFinish">Frame finish</label><select id="frameFinish" name="frame_finish"><option value="Natural Wood">Natural Wood</option><option value="Black">Black</option><option value="White">White</option></select>
 <label for="matChoice">Matting</label><select id="matChoice" name="matting"><option value="White">White</option><option value="Ivory">Ivory</option><option value="No Mat">No Mat</option></select>
@@ -50,6 +72,7 @@
 const form=document.getElementById('quoteForm');const status=document.getElementById('formStatus');const button=document.getElementById('submitButton');form.addEventListener('submit',async(event)=>{event.preventDefault();button.disabled=true;status.textContent='Sending your request…';try{const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});if(response.ok){status.textContent='Thank you! Your trade quote request has been sent.';form.reset();window.HelmamayCustomizer.updatePreview();}else{status.textContent='We could not send your request. Please try again.';}}catch(error){status.textContent='There was a connection problem. Please try again.';}finally{button.disabled=false;}});
 </script>
 <script src="customizer.js" defer></script>
+<script src="background-color.js" defer></script>
   <script src="social-links.js" defer></script>
 </body>
 </html>

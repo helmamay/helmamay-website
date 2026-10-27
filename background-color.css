@@ -1,0 +1,11 @@
+#background-controls{margin:0 0 12px;padding:18px;border:1px solid #bcb5aa;min-width:0}
+#background-controls legend{font:21px Georgia,serif;padding:0 6px}
+#background-controls .background-toggle{display:flex;gap:9px;align-items:center;line-height:1.5}
+#background-custom{width:18px;height:18px;margin:0;flex:0 0 auto}
+#background-controls .background-swatches{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 18px}
+#background-controls .background-swatches button{width:36px;height:36px;padding:0;border:1px solid #8b8176;background:var(--swatch);margin:0;border-radius:50%}
+#background-controls .background-swatches button[aria-pressed="true"]{outline:2px solid #292724;outline-offset:3px}
+#background-controls button:focus-visible{outline:3px solid #395d72;outline-offset:3px}
+.background-inputs{display:grid;grid-template-columns:1fr 1.5fr;gap:12px;margin-bottom:18px}
+#background-picker{height:44px;padding:4px}
+#background-reset{font:13px Georgia,serif;letter-spacing:0;background:transparent;color:#292724;border:1px solid #8b8176;padding:10px}

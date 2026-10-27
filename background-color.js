@@ -1,8 +1,8 @@
 // Optional, artwork-specific background preview. Source artwork is never overwritten.
 (function () {
   'use strict';
-  const form = document.getElementById('quote-form');
   const panel = document.getElementById('background-controls');
+  const form = panel && panel.closest('form');
   if (!form || !panel) return;
   const enabled = document.getElementById('background-custom');
   const picker = document.getElementById('background-picker');
@@ -52,12 +52,12 @@
       const image = new Image();
       image.src = originals[0];
       await image.decode();
-      if (image.naturalWidth !== mask.width || image.naturalHeight !== mask.height) throw new Error('Source dimensions changed');
+      if (image.naturalWidth !== (mask.sourceWidth || mask.width) || image.naturalHeight !== (mask.sourceHeight || mask.height)) throw new Error('Source dimensions changed');
       const canvas = document.createElement('canvas');
       canvas.width = mask.width; canvas.height = mask.height;
       const context = canvas.getContext('2d');
       if (!context) throw new Error('Canvas unavailable');
-      context.drawImage(image, 0, 0);
+      context.drawImage(image, 0, 0, mask.width, mask.height);
       const pixels = context.getImageData(0, 0, mask.width, mask.height);
       for (const [start, length] of mask.runs) {
         if (!Number.isInteger(start) || !Number.isInteger(length) || start < 0 || length < 1 || start + length > mask.width * mask.height) throw new Error('Invalid mask');

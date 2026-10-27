@@ -10,11 +10,12 @@
 *{box-sizing:border-box}body{margin:0;background:#faf8f3;color:#292724;font-family:Georgia,serif;text-align:center}header{padding:60px 20px 35px}h1{font-size:48px;font-weight:normal;margin:0 0 12px}.subtitle{color:#77716a;font-size:16px;letter-spacing:1px}.back{display:inline-block;margin-top:20px;color:#292724;text-decoration:none;border-bottom:1px solid #292724;padding-bottom:4px}main{max-width:1100px;margin:auto;padding:20px 24px 80px}.original{display:block;max-width:280px;max-height:850px;width:auto;height:auto;margin:0 auto 65px;object-fit:contain}.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:35px}figure{margin:0}figure img{display:block;width:100%;height:auto}.customize{margin:85px auto 30px;border-top:1px solid #ded8ce;padding-top:55px}.customize h2{font-size:32px;font-weight:normal}.customize>p{color:#6b655e;line-height:1.6}.custom-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,1fr);gap:45px;text-align:left;align-items:start;margin-top:35px}.preview-area{background:#e9e5dc;min-height:450px;display:flex;justify-content:center;align-items:center;padding:35px 22px}.frame{--frame-color:#9c744d;background:var(--frame-color);padding:13px;box-shadow:4px 9px 18px #0003;max-width:100%;transition:background .2s}.mat{background:#fffef8;padding:27px;transition:padding .2s,background .2s}.mat.none{padding:0}.mat img{display:block;width:min(100%,260px);max-height:330px;object-fit:contain;background:white}.controls label{display:block;margin:0 0 8px;font-size:14px}.field{margin-bottom:22px}.controls select,.controls input{width:100%;padding:12px;border:1px solid #bcb5aa;background:#fffefa;color:#292724;font:15px Georgia,serif}.controls button{padding:15px 20px;background:#292724;color:white;border:0;font:13px Arial,sans-serif;letter-spacing:1px;cursor:pointer;width:100%}.controls button:hover{background:#4b443d}.fineprint{font-size:12px;color:#777;line-height:1.6;margin-top:15px}.status{font-size:14px;color:#615a52;margin-top:12px;line-height:1.5}.controls textarea{width:100%;padding:12px;border:1px solid #bcb5aa;background:#fffefa;color:#292724;font:15px Georgia,serif;min-height:110px;resize:vertical}.form-heading{font-size:23px;font-weight:normal;margin:30px 0 20px}.controls button:disabled{opacity:.6;cursor:wait}.success{color:#315c3d}.error{color:#9b3535}@media(max-width:700px){.custom-layout{grid-template-columns:1fr}.preview-area{min-height:360px}h1{font-size:36px}.gallery{grid-template-columns:1fr}}
 </style>
   <link rel="stylesheet" href="social-links.css">
+  <link rel="stylesheet" href="background-color.css">
 </head>
 <body>
 <header><h1>Feronia</h1><p class="subtitle">Original Artwork | Helmamay Studios</p><a class="back" href="index.html">← Back to Gallery</a></header>
 <main>
-<img class="original" src="Feronia.jpg" alt="Feronia original artwork">
+<img data-color-preview class="original" src="Feronia.jpg" alt="Feronia original artwork">
 <div class="gallery">
 <figure><img src="Feronia2.png" alt="Feronia interior mockup 1"></figure>
 <figure><img src="Feronia4.png" alt="Feronia interior mockup 2"></figure>
@@ -27,9 +28,30 @@
 <h2 id="custom-heading">Customize This Artwork</h2>
 <p>Explore framing options for your project. Available exclusively to design professionals.</p>
 <div class="custom-layout">
-<div class="preview-area" aria-label="Framing preview"><div class="frame" id="preview-frame"><div class="mat" id="preview-mat"><img src="Feronia.jpg" alt="Feronia with selected frame and mat"></div></div></div>
+<div class="preview-area" aria-label="Framing preview"><div class="frame" id="preview-frame"><div class="mat" id="preview-mat"><img data-color-preview src="Feronia.jpg" alt="Feronia with selected frame and mat"></div></div></div>
 <div class="controls">
 <form id="quote-form" action="https://formspree.io/f/xeaewlqp" method="POST">
+<input type="hidden" id="background-value" name="artwork_background" value="Original white background">
+<fieldset id="background-controls" data-mask="feronia-background-mask.json" disabled>
+<legend>Artwork background color</legend>
+<label class="background-toggle"><input id="background-custom" type="checkbox"> Customize background color</label>
+<div class="background-swatches" role="group" aria-label="Suggested background colors">
+<button type="button" data-background-color="#FFFFFF" style="--swatch:#FFFFFF" aria-label="White background" aria-pressed="false"></button>
+<button type="button" data-background-color="#3F86B8" style="--swatch:#3F86B8" aria-label="Blue background" aria-pressed="false"></button>
+<button type="button" data-background-color="#3F677A" style="--swatch:#3F677A" aria-label="Dark blue background" aria-pressed="false"></button>
+<button type="button" data-background-color="#D7DCD2" style="--swatch:#D7DCD2" aria-label="Pale green background" aria-pressed="false"></button>
+<button type="button" data-background-color="#E9DFCE" style="--swatch:#E9DFCE" aria-label="Warm ivory background" aria-pressed="false"></button>
+</div>
+<div class="background-inputs">
+<div><label for="background-picker">Choose a color</label><input id="background-picker" type="color" value="#3f86b8" disabled></div>
+<div><label for="background-hex">HEX color code</label><input id="background-hex" type="text" value="#3F86B8" maxlength="7" pattern="#[0-9A-Fa-f]{6}" spellcheck="false" disabled></div>
+</div>
+<div class="field"><label for="background-reference">Paint brand / color reference (optional)</label><input id="background-reference" name="background_color_reference" type="text" placeholder="Brand and color name or number" disabled></div>
+<button type="button" id="background-reset">Restore original white background</button>
+<p class="fineprint">Color changes appear in the artwork and framing previews. Room mockups show the original version. Screen colors are illustrative. Final color will be confirmed with a print proof.</p>
+</fieldset>
+<p id="background-status" class="fineprint" role="status" aria-live="polite">Loading background color preview…</p>
+<noscript><p>For a custom background color, include your color reference in Project details.</p></noscript>
 <input type="hidden" name="artwork" value="Feronia">
 <div class="field"><label for="print-size">Print size</label><select id="print-size" name="print_size"><option>8 × 10 inches</option><option selected>16 × 20 inches</option><option>24 × 30 inches</option><option>Custom size — discuss availability</option></select></div>
 <div class="field"><label for="mat-choice">Matting</label><select id="mat-choice" name="matting"><option value="White">White</option><option value="Ivory">Ivory</option><option value="No mat">No mat</option></select></div>
@@ -85,6 +107,7 @@ const form=document.getElementById('quote-form');
 })();
 </script>
 <script src="customizer.js" defer></script>
+<script src="background-color.js" defer></script>
   <script src="social-links.js" defer></script>
 </body>
 </html>
