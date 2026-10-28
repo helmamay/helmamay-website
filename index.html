@@ -137,6 +137,23 @@ margin: 45px auto 0;
 .about h2 {
   text-align: center;
 }
+.about-portrait {
+  float: left;
+  width: 200px;
+  max-width: 40%;
+  height: auto;
+  margin: 6px 30px 18px 0;
+  display: block;
+}
+.about::after { content: ""; display: block; clear: both; }
+@media (max-width: 600px) {
+  .about-portrait {
+    float: none;
+    width: 180px;
+    max-width: 100%;
+    margin: 24px auto;
+  }
+}
 
 .about p {
   font-size: 18px;
@@ -384,6 +401,7 @@ margin: 45px auto 0;
    
 <section id="about" class="about">
   <h2>About the Studio</h2>
+  <img class="about-portrait" src="Portrait.png" alt="Portrait of the artist behind Helmamay Studios" width="1086" height="1448" loading="lazy" decoding="async">
 
   <p>I've always been drawn to art, design, and the endless possibilities of creative expression. With a background in art history and a lifelong appreciation for beautiful and unusual things, I've developed a particular fascination with color, pattern, and the way seemingly unrelated elements can come together to create something interesting.</p>
 
