@@ -224,6 +224,7 @@ margin: 45px auto 0;
       <h1>Art That Defines a Space.</h1>
       <p>Expressive abstract artwork for residential and commercial spaces.</p>
       <div class="trade-intro"><p>Fine-art prints, thoughtfully tailored in size and presentation for interior design professionals.</p><p class="trade-label">EXCLUSIVELY TO THE TRADE</p></div>
+      <a id="lookbook" class="shop-link" href="https://www.canva.com/design/DAHYlirYIuc/iW5C0BY02nJQszLGej-15Q/view?utm_content=DAHYlirYIuc&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=uniquelinks&amp;utlId=h7c14be7b65" target="_blank" rel="noopener">VIEW THE LOOKBOOK ↗</a>
     </section>
 
     <section id="artwork">
@@ -495,6 +496,16 @@ margin: 45px auto 0;
   <footer class="studio-footer">
     <p>© Helmamay Studios · Original Art &amp; Design</p>
   </footer>
+  <script>
+    const lookbookLink = document.getElementById('lookbook');
+    function trackLookbookClick() {
+      gtag('event', 'lookbook_click', { link_url: lookbookLink.href });
+    }
+    lookbookLink.addEventListener('click', trackLookbookClick);
+    lookbookLink.addEventListener('auxclick', function (event) {
+      if (event.button === 1) trackLookbookClick();
+    });
+  </script>
   <script src="social-links.js" defer></script>
 </body>
 </html>
